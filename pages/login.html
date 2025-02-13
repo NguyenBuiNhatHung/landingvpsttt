@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="index, follow">
+    <meta name="og:title" property="og:title" content="DataAI - Free Data Analytics Tailwind CSS Dashboard Template">
+	<meta property="og:image" content="https://designtocodes.com/wp-content/uploads/2023/12/DataAI-Free-Data-Analytics-Tailwind-CSS-Dashboard-Template.jpg">
+	<meta name="og:description" content="DataAI is a professional and developer-friendly free data analytics Tailwind CSS dashboard template. Start developing limitless customized projects!">
+    <link rel="icon" href="../public/assets/images/logo/favicon.png" type="image/gif" sizes="16x16">
+    <title>Login</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../public/lib/fontawesome/css/all.min.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="../public/assets/css/style.css">
+</head>
+<body class="bg-primary-3 text-base">
+    <!-- Preloader Start -->
+    <div class="preloader h-full fixed w-full z-50 bg-white transition duration-300">
+        <img src="../public/assets/images/logo/logo.png" class="max-w-[20rem] block absolute top-2/4 left-2/4 transform -translate-x-2/4 -translate-y-2/4" alt="Logo">
+    </div>
+    <!-- Preloader End -->
+    <div class="grid grid-cols-1 lg:grid-cols-5 lg:gap-6">
+        <div class="bg-primary col-span-2 hidden lg:flex items-center justify-start p-4 lg:h-screen bg-[url('../../../public/assets/images/auth/auth-bg.png')] bg-no-repeat bg-cover bg-center lg:pl-12 xxl:pl-36">
+            <div class="content">
+                <img class="max-w-[16rem] mb-6" src="../public/assets/images/logo/logo_white_1.png" alt="Logo">
+                <h4 class="text-white md:text-3xl xl:text-[42px] font-bold capitalize xl:leading-[52px]">Get Started Your Project With Data Ai</h4>
+            </div>
+        </div>
+        <div class="col-span-3 px-4 py-8 flex items-center justify-center  h-screen lg:h-auto">
+            <div class="text-center w-full md:w-3/4 xxl:w-2/4">
+                <div class="col-start-2 col-end-12 col-span-4">
+                    <div class="mb-10">
+                        <h1 class="text-4xl text-primary font-bold mb-3">Welcome Back</h1>
+                        <p class="text-base text-info">See your growth and get consulting support</p>
+                    </div>
+                    
+                    <div class="flex items-center justify-between flex-col md:flex-row">
+                        <button class="w-full md:w-1/2 bg-white text-info font-semibold py-3 rounded-std border border-primary-1 hover:bg-primary-1 hover:text-primary transition-colors duration-500 mb-3 inline-flex items-center justify-center md:mr-1">
+                            <img src="../public/assets/images/google.svg" class="inline-block mr-3" alt="Google logo">
+                            Sign In with Google
+                        </button>
+                        
+                        <button class="w-full md:w-1/2 bg-white text-info font-semibold py-3 rounded-std border border-primary-1 hover:bg-primary-1 hover:text-primary transition-colors duration-500 mb-3 inline-flex items-center justify-center md:ml-1">
+                            <img src="../public/assets/images/apple.svg" class="inline-block mr-3" alt="Apple logo">
+                            Sign In with Apple
+                        </button>
+                    </div>
+
+                    <div class="mb-5">
+                        <h6 class="text-info font-bold text-xl relative after:content-[''] after:w-full after:h-auto after:border-b after:border-primary-1 after:-z-10 after:absolute after:top-1/2 after:inset-x-0"><span class="bg-primary-3 px-2 font-bold text-base text-info">Or</span></h6>
+                    </div>
+
+                    <form class="w-full validation" novalidate>
+                        <div class="mb-5 text-left">
+                            <label for="loginMail">Email</label>
+                            <input type="email" class="form-control" name="loginMail" id="loginMail" placeholder="info@gmail.com" required >
+                        </div>
+                        <div class="mb-4 text-left">
+                            <label for="loginPassword">Password</label>
+                            <input type="password"  class="form-control" name="loginPassword" id="loginPassword" placeholder="***********" required >
+                        </div>
+                        <div class="d2c_forgot_pass flex items-center justify-between mb-5">
+                            <label class="flex items-center mb-0">
+                                <input class="mr-2 relative appearance-none rounded-std-1/2 border border-1 cursor-pointer border-info-1 checked:border-primary checked:bg-primary checked:after:content-['\2713'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 h-4 w-4" type="checkbox" required > <span class="text-info">Remember</span>
+                            </label>
+                            <a class="text-primary hover:text-info-1 font-semibold transition-colors duration-500" href="../pages/forgot.html">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white font-semibold py-3 rounded-std border border-primary hover:bg-primary-1 hover:text-primary transition-colors duration-500 mb-5">Login</button>
+
+                        <p class="text-info font-semibold">Don't have an account? <a class="text-primary hover:text-info-1 font-bold transition-colors duration-500" href="../pages/registration.html">Create an Account</a></p>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Main Js Config -->
+    <script src="../public/assets/js/main.js"></script>
+</body>
+</html>
