@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <meta name="og:title" property="og:title" content="DataAI - Free Tailwind App Landing Page Template">
-    <meta property="og:image"
-        content="https://designtocodes.com/wp-content/uploads/2023/12/DataAI-Free-Tailwind-App-Landing-Page-Template.jpg">
+    <meta name="og:title" property="og:title" content="Tham gia Chương Trình Giới Thiệu - Nhận Ưu Đãi Lớn với VPSTTT!">
+    <meta property="og:image" content="public/assets/images/logo/logo.png">
     <meta name="og:description"
-        content="DataAI is a simple and basic app landing page template made especially for people who want to showcase dashboards. Get our free landing page template now!">
+        content="Giới thiệu bạn bè tới VPSTTT và cùng nhau hưởng ưu đãi đặc biệt! Tìm hiểu ngay cách để nhận thưởng và cung cấp giá trị cho bạn bè của bạn!">
     <link rel="icon" href="./public/assets/images/logo/favicon.png" type="image/gif" sizes="16x16">
-    <title>Landing Page</title>
+    <meta name="description"
+        content="Giới thiệu bạn bè tới VPSTTT và cùng nhau hưởng ưu đãi đặc biệt! Tìm hiểu ngay cách để nhận thưởng và cung cấp giá trị cho bạn bè của bạn!">
+    <title>Tham gia Chương Trình Giới Thiệu - Nhận Ưu Đãi Lớn với VPSTTT!</title>
     <!-- FontAwesome -->
     <link rel="stylesheet" href="./public/lib/fontawesome/css/all.min.css">
     <!-- Google Font -->
@@ -25,6 +26,37 @@
     <link rel="stylesheet" href="./public/assets/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<?php
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type');
+require "config.php";
+function getUserIP()
+{
+    // Kiểm tra xem IP có được cung cấp qua proxy hay không
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+        $ip = $_SERVER['HTTP_CLIENT_IP'];
+    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    } else {
+        $ip = $_SERVER['REMOTE_ADDR'];
+    }
+    return $ip;
+}
+//check ip đã được lưu lại chưa
+$userIP = getUserIP();
+$sql_checkip = "select * from view where ip = '$userIP';";
+$checkip = mysqli_query($conn, $sql_checkip);
+if (mysqli_num_rows($checkip)) {
+    //đã tồn tại trong view
+    $sql_upip = "update view set count = count +1 where ip = '$userIP'";
+    $upip = mysqli_query($conn, $sql_upip);
+} else {
+    $sql_addip = "INSERT INTO view (ip, count) VALUES ( '$userIP',1)";
+    $addip = mysqli_query($conn, $sql_addip);
+}
+
+?>
 
 <body class="landing">
     <!-- Preloader Start -->
@@ -40,11 +72,10 @@
             <div class="container">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center">
-                        <a href="./index.html">
+                        <a href="/">
                             <img src="./public/assets/images/logo/logo.png" class="w-36" alt="Logo Image">
                         </a>
                     </div>
-
                     <div class="lg:hidden">
                         <button
                             class="bg-[#e4dbed] text-primary hover:bg-primary font-semibold hover:text-white rounded-std transition-colors shadow-std py-2 px-3"
@@ -52,11 +83,10 @@
                             <i class="fas fa-bars"></i>
                         </button>
                     </div>
-
                     <div class="hidden lg:flex items-center ">
                         <ul class="font-medium flex flex-col lg:flex-row items-center relative py-0" id="js-clone-nav">
                             <li>
-                                <a href="#"
+                                <a href="index.php"
                                     class="block py-2 pl-3 pr-4 font-semibold text-secondary hover:text-primary transition-colors duration-300"
                                     aria-current="page">Trang chủ</a>
                             </li>
@@ -286,8 +316,7 @@
         id="loiich">
         <div class="container">
             <h4 class="d2c_title text-center mb-10">Lợi ích nhận được khi đến với VPSTTT</h4>
-
-            <div class="grid grid-cols-2 md:grid-cols-2 xl:grid-cols-2 gap-6 mb-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6 mb-4">
 
                 <!-- Card -->
                 <div class="card group hover:bg-primary transition-colors duration-300">
@@ -549,7 +578,7 @@
             </div>
             <div class="text-center w-full md:w-3/4 mx-auto">
                 <div class="col-start-2 col-end-12 col-span-4">
-                    <form id="registerForm" class="w-full validation" novalidate>
+                    <form action="camon" method="POST" id="registerForm" class="w-full">
                         <div class="grid grid-cols-1 gap-6">
                             <div class="mb-4 text-left">
                                 <label for="hoten">Họ và tên</label>
@@ -567,100 +596,103 @@
                             </div>
                             <div class="mb-4 text-left relative">
                                 <label for="sdt">Số điện thoại</label>
-                                <input type="tel" id="sdt" class="form-control" name="sdt" placeholder="0123456789"
+                                <input type="tel" id="sdt" class="form-control" name="sdt" placeholder="0328812674"
                                     required>
                                 <p id="sdt-error" class="text-red-500 text-sm mt-1 hidden"></p>
                             </div>
                         </div>
-                        <button type="submit" id="submit-btn"
-                            class="block py-3 px-4 pr-4 text-white bg-gray-400 font-bold rounded-std w-full cursor-not-allowed"
+                        <div class="g-recaptcha mb-4" data-sitekey="6Le4IbwqAAAAANh5lyRt9ZBbnpBT8dfBG6ma5cGq"
+                            data-callback="onRecaptchaSuccess"></div>
+                        <!-- Nút Submit -->
+                        <button type="submit" id="submit-btn" name="submit"
+                            class="block py-3 px-4 text-white bg-gray-400 font-bold rounded-std w-full cursor-not-allowed"
                             disabled>
                             Đăng ký
                         </button>
                     </form>
-
                 </div>
             </div>
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         </div>
     </section>
+
+
+    <!-- Thêm script reCAPTCHA -->
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const hoten = document.getElementById("hoten");
             const email = document.getElementById("email");
             const sdt = document.getElementById("sdt");
             const submitBtn = document.getElementById("submit-btn");
-
-            const hotenError = document.getElementById("hoten-error");
-            const emailError = document.getElementById("email-error");
-            const sdtError = document.getElementById("sdt-error");
+            let isRecaptchaValid = false; // Biến để kiểm tra trạng thái reCAPTCHA
 
             function validateForm() {
                 let isValid = true;
 
-                // 1️⃣ Kiểm tra họ tên: không để trống, không chứa ký tự đặc biệt
-                const nameRegex = /^[a-zA-ZÀ-ỹ\s]+$/; // Chỉ cho phép chữ và khoảng trắng
-                if (hoten.value.trim() === "") {
-                    hotenError.textContent = "Họ và tên không được để trống.";
-                    hotenError.classList.remove("hidden");
+                // Kiểm tra họ tên
+                const nameRegex = /^[a-zA-ZÀ-ỹ\s]+$/;
+                if (!hoten.value.trim()) {
+                    document.getElementById("hoten-error").textContent = "Họ và tên không được để trống.";
+                    document.getElementById("hoten-error").classList.remove("hidden");
                     isValid = false;
                 } else if (!nameRegex.test(hoten.value.trim())) {
-                    hotenError.textContent = "Họ và tên không được chứa ký tự đặc biệt.";
-                    hotenError.classList.remove("hidden");
+                    document.getElementById("hoten-error").textContent = "Họ và tên không hợp lệ.";
+                    document.getElementById("hoten-error").classList.remove("hidden");
                     isValid = false;
                 } else {
-                    hotenError.classList.add("hidden");
+                    document.getElementById("hoten-error").classList.add("hidden");
                 }
 
-                // 2️⃣ Kiểm tra email: đúng định dạng
+                // Kiểm tra email
                 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-                if (email.value.trim() === "") {
-                    emailError.textContent = "Email không được để trống.";
-                    emailError.classList.remove("hidden");
+                if (!email.value.trim()) {
+                    document.getElementById("email-error").textContent = "Email không được để trống.";
+                    document.getElementById("email-error").classList.remove("hidden");
                     isValid = false;
                 } else if (!emailRegex.test(email.value.trim())) {
-                    emailError.textContent = "Email không hợp lệ.";
-                    emailError.classList.remove("hidden");
+                    document.getElementById("email-error").textContent = "Email không hợp lệ.";
+                    document.getElementById("email-error").classList.remove("hidden");
                     isValid = false;
                 } else {
-                    emailError.classList.add("hidden");
+                    document.getElementById("email-error").classList.add("hidden");
                 }
 
-                // 3️⃣ Kiểm tra số điện thoại: chỉ chứa số, bắt đầu bằng 0, đúng 10 số
+                // Kiểm tra số điện thoại
                 const phoneRegex = /^0\d{9}$/;
-                if (sdt.value.trim() === "") {
-                    sdtError.textContent = "Số điện thoại không được để trống.";
-                    sdtError.classList.remove("hidden");
+                if (!sdt.value.trim()) {
+                    document.getElementById("sdt-error").textContent = "Số điện thoại không được để trống.";
+                    document.getElementById("sdt-error").classList.remove("hidden");
                     isValid = false;
                 } else if (!phoneRegex.test(sdt.value.trim())) {
-                    sdtError.textContent = "Số điện thoại phải có 10 số và bắt đầu bằng 0.";
-                    sdtError.classList.remove("hidden");
+                    document.getElementById("sdt-error").textContent = "Số điện thoại phải có 10 số và bắt đầu bằng 0.";
+                    document.getElementById("sdt-error").classList.remove("hidden");
                     isValid = false;
                 } else {
-                    sdtError.classList.add("hidden");
+                    document.getElementById("sdt-error").classList.add("hidden");
                 }
 
-                // 🔹 Nếu có lỗi -> disable nút đăng ký
-                submitBtn.disabled = !isValid;
-                submitBtn.classList.toggle("bg-primary", isValid);
-                submitBtn.classList.toggle("bg-gray-400", !isValid);
-                submitBtn.classList.toggle("cursor-not-allowed", !isValid);
+                // Bật hoặc tắt nút Submit
+                submitBtn.disabled = !isValid || !isRecaptchaValid; // Kiểm tra cả reCAPTCHA
+                submitBtn.classList.toggle("bg-primary", isValid && isRecaptchaValid);
+                submitBtn.classList.toggle("bg-gray-400", !isValid || !isRecaptchaValid);
+                submitBtn.classList.toggle("cursor-not-allowed", !isValid || !isRecaptchaValid);
             }
 
-            // 🎯 Kiểm tra khi người dùng nhập dữ liệu
+            // Hàm được gọi khi reCAPTCHA thành công
+            function onRecaptchaSuccess() {
+                isRecaptchaValid = true; // Đánh dấu reCAPTCHA là hợp lệ
+                validateForm(); // Kiểm tra lại trạng thái nút đăng ký
+            }
+
             hoten.addEventListener("input", validateForm);
             email.addEventListener("input", validateForm);
             sdt.addEventListener("input", validateForm);
 
-            document.getElementById("registerForm").addEventListener("submit", function (event) {
-                if (submitBtn.disabled) {
-                    event.preventDefault(); // Ngăn chặn gửi form nếu không hợp lệ
-                } else {
-                    alert("Đăng ký thành công!");
-                }
-            });
+            // Gán sự kiện cho reCAPTCHA
+            window.onRecaptchaSuccess = onRecaptchaSuccess; // Gán hàm gọi lại cho reCAPTCHA
         });
     </script>
-
     <!-- Contact -->
     <style>
         @keyframes pulse-ring {
@@ -787,12 +819,13 @@
             <div class="text-center py-24 border-b border-[rgba(228,219,237,0.06)]">
                 <h2 class="text-4xl text-white font-bold mb-5">Bạn đã sẵn sàng nắm bắt cơ hội này chưa?</h2>
                 <p class="mb-4 text-white">Đừng để cơ hội trôi qua! Hãy kết nối ngay hôm nay qua Messenger, Zalo, hoặc
-                    gọi điện để khám phá những giải pháp mà chúng tôi cung cấp.<br> Mỗi kết nối là một bước tiến gần hơn
-                    đến
-                    mục tiêu của bạn. Nắm bắt cơ hội này và cùng chúng tôi phát triển! <br>
-                    <a href="./index.html"
+                    gọi điện để khám phá những giải pháp mà chúng tôi cung cấp.<br>
+                    Mỗi kết nối là một bước tiến gần hơn đến mục tiêu của bạn. Nắm bắt cơ hội này và cùng chúng tôi phát
+                    triển! <br>
+                    <a href="#dangky"
                         class="inline-flex py-2 px-8 text-primary font-bold bg-white rounded-std mr-2 mt-3">Bắt đầu
                         ngay</a>
+                </p>
             </div>
 
             <div
@@ -801,6 +834,15 @@
                     <a href="https://vpsttt.com/"><img class="w-36" src="./public/assets/images/logo/logowhite.svg"
                             alt="Logo Image"></a>
                 </div>
+
+                <div class="text-white text-center md:text-left">
+                    <p class="font-semibold text-lg">Thông tin liên hệ</p>
+                    <p>Email: <a href="mailto:lienhe@vpsttt.com"
+                            class="text-white hover:underline">lienhe@vpsttt.com</a></p>
+                    <p>Hotline: <a href="tel:+84328812674" class="text-white hover:underline">+84 328 812 674</a></p>
+                    <p>Địa chỉ: Số 15 Đường B3, Phường Vĩnh Hòa, Thành phố Nha Trang, Tỉnh Khánh Hòa</p>
+                </div>
+
                 <div class="mb-4 md:mb-0">
                     <a target="_blank" href="https://designtocodes.com/privacy-policy/"
                         class="text-white text-base font-semibold">Privacy Policy</a>
@@ -811,15 +853,15 @@
 
                 <div class="mb-4 md:mb-0 flex space-x-3">
                     <!-- Facebook -->
-                    <a target="_blank" href="https://www.facebook.com/Designtocodes"
+                    <a target="_blank" href="https://www.facebook.com/trang.vpsttt"
                         class="bg-[#1877F2] text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg hover:bg-blue-600 transition-colors">
                         <i class="fab fa-facebook-f text-lg"></i>
                     </a>
 
                     <!-- Zalo -->
-                    <a target="_blank" href="https://zalo.me/yourid"
+                    <a target="_blank" href="https://zalo.me/vpstttgroup"
                         class="bg-[#0088FF] text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg hover:bg-blue-500 transition-colors">
-                        <i class="fas fa-comment-dots text-lg"></i>
+                        <img src="public/assets/images/logo/zalo.png" alt="Zalo" class="w-6 h-6">
                     </a>
                 </div>
             </div>

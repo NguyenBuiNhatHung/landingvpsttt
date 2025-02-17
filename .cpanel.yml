@@ -1,0 +1,17 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/khuyenmaivpsttt/public_html/
+    - /bin/cp -R * $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH
+    # - /bin/cp -R img $DEPLOYPATH
+    # - /bin/cp -R css $DEPLOYPATH
+    # - /bin/cp -R js $DEPLOYPATH
+    # - /bin/cp -R lib $DEPLOYPATH
+    # - /bin/cp -R scss $DEPLOYPATH
+    # - /bin/cp *.php $DEPLOYPATH
+    # - /bin/cp *.jpg $DEPLOYPATH
+    # - /bin/cp list_banned_words.txt $DEPLOYPATH
+    # - /bin/cp *.html $DEPLOYPATH
+    # - /bin/cp *.css $DEPLOYPATH
+    # - /bin/cp *.js $DEPLOYPATH
