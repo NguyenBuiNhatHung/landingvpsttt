@@ -30,24 +30,24 @@ if (isset($_POST['submit']) && isset($_POST['hoten']) && isset($_POST['sdt']) &&
 
         if ($resultJson->success) {
         } else {
-            header("Location:index.php");
+            header("Location:/");
             exit;
         }
 
         //thông tin form
         $name = mysqli_real_escape_string($conn, $_POST['hoten']);
         if (!preg_match("/^[\p{L}\s]+$/u", $name)) {
-            header("Location:index.php");
+            header("Location:/");
             exit;
         }
         $phone = mysqli_real_escape_string($conn, $_POST['sdt']);
         if (!preg_match("/^0[0-9]{9}$/", $phone)) {
-            header("Location:index.php");
+            header("Location:/");
             exit;
         }
         $email = mysqli_real_escape_string($conn, $_POST['email']);
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            header("Location:index.php");
+            header("Location/");
             exit;
         }
 
@@ -63,8 +63,8 @@ if (isset($_POST['submit']) && isset($_POST['hoten']) && isset($_POST['sdt']) &&
                 $sql_khuyenmai = "INSERT INTO khuyenmai (email, phone, name, code,date) VALUES ('$email', '$phone', '$name', '$code','$currentDate')";
                 $khuyenmai = mysqli_query($conn, $sql_khuyenmai);
                 //xóa code vừa sử dụng
-                $sql_delcode = "DELETE FROM code WHERE code = '$code'";
-                $delcode = mysqli_query($conn, $sql_delcode);
+                // $sql_delcode = "DELETE FROM code WHERE code = '$code'";
+                // $delcode = mysqli_query($conn, $sql_delcode);
                 $mail = new PHPMailer(true);
                 $mail->isSMTP();  // Sử dụng SMTP
                 $mail->Host = 'smtp.gmail.com';
@@ -72,8 +72,8 @@ if (isset($_POST['submit']) && isset($_POST['hoten']) && isset($_POST['sdt']) &&
                 $mail->SMTPAuth = true;                    // Bật xác thực SMTP
                 $mail->Username = $mailsv;                // Tên đăng nhập email
                 $mail->Password = $mailsvpass;                       // Mật khẩu email
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;      // Bảo mật
-                $mail->Port = 587;
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;// Bảo mật
+                $mail->Port = 465;
                 // Người gửi và người nhận
                 $mail->setFrom($mailsv, 'VPSTTT'); // Địa chỉ người gửi
                 $mail->addAddress($email, $name); // Địa chỉ người nhận
@@ -218,7 +218,7 @@ if (isset($_POST['submit']) && isset($_POST['hoten']) && isset($_POST['sdt']) &&
                 của VPSTTT.</p>
 
             <p><strong>MÃ GIỚI THIỆU ĐỘC QUYỀN CỦA BẠN:</strong>
-                <span class="code">'.$code.'</span>
+                <span class="code">' . $code . '</span>
             </p>
             <p>Thời gian sử dụng mã: 2 tháng kể từ ngày nhận.</p>
 
@@ -277,7 +277,7 @@ if (isset($_POST['submit']) && isset($_POST['hoten']) && isset($_POST['sdt']) &&
         $_SESSION['code'] = $code;
     }
 } else {
-    header("Location:index.php");
+    header("Location:/");
     exit;
 }
 
@@ -457,8 +457,7 @@ if (isset($_POST['submit']) && isset($_POST['hoten']) && isset($_POST['sdt']) &&
                 </h4>
                 <p class="text-info-1 text-lg">Chúng tôi xin chân thành cảm ơn quý khách đã quan tâm đến chương trình
                     giới thiệu khách hàng của VPSTTT.</p>
-                <p class="text-info-1 text-lg mt-2">Chúng tôi xin phép gửi đến quý khách mã giới thiệu độc quyền của
-                    mình:</p>
+                <p class="text-info-1 text-lg mt-2">Mã giới thiệu độc quyền:</p>
                 <div class="flex items-center justify-center">
                     <p class="font-bold text-4xl animate-color-change mr-4">
                         <span id="promo-code"><?= $_SESSION['code'] ?></span>
@@ -468,8 +467,7 @@ if (isset($_POST['submit']) && isset($_POST['hoten']) && isset($_POST['sdt']) &&
                         <i class="fas fa-copy mr-2"></i> Copy
                     </button>
                 </div>
-                <p class="text-info-1 text-lg mt-4">Nếu quý khách có bất kỳ thắc mắc nào, xin vui lòng liên hệ với chúng
-                    tôi qua Zalo OA hoặc Fanpage.</p>
+                <p class="text-info-1 text-lg mt-4">Liên hệ với chúng tôi qua Zalo OA hoặc Fanpage.</p>
             </div>
         </div>
     </section>

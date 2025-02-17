@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <meta name="og:title" property="og:title" content="Tham gia Chương Trình Giới Thiệu - Nhận Ưu Đãi Lớn với VPSTTT!">
-    <meta property="og:image" content="public/assets/images/logo/logo.png">
+    <meta property="og:image" content="./public/assets/images/logo/logo.png">
     <meta name="og:description"
         content="Giới thiệu bạn bè tới VPSTTT và cùng nhau hưởng ưu đãi đặc biệt! Tìm hiểu ngay cách để nhận thưởng và cung cấp giá trị cho bạn bè của bạn!">
     <link rel="icon" href="./public/assets/images/logo/favicon.png" type="image/gif" sizes="16x16">
@@ -110,11 +110,11 @@ if (mysqli_num_rows($checkip)) {
                                     </li>
                                     <li>
                                         <un class="text-global font-semibold hover:text-primary text-base flex items-center py-1 transition-colors duration-500 capitalize"
-                                            href="./pages/registration.html">Sử dụng mã</a>
+                                            href="">Sử dụng mã</a>
                                     </li>
                                     <li>
                                         <a class="text-global font-semibold hover:text-primary text-base flex items-center py-1 transition-colors duration-500 capitalize"
-                                            href="./pages/forgot.html">Mua hàng</a>
+                                            href="">Mua hàng</a>
                                     </li>
                                 </ul>
                             </li>
@@ -124,13 +124,13 @@ if (mysqli_num_rows($checkip)) {
                                     dẫn lấy mã</a>
                             </li>
                             <li>
-                                <un href="#d2c_services"
+                                <a href=""
                                     class="block lg:hidden py-2 pl-3 pr-4 font-semibold text-secondary hover:text-primary transition-colors duration-300">
                                     Hướng
                                     dẫn dùng mã</a>
                             </li>
                             <li>
-                                <a href="#d2c_services"
+                                <a href=""
                                     class="block lg:hidden py-2 pl-3 pr-4 font-semibold text-secondary hover:text-primary transition-colors duration-300">Hướng
                                     dẫn mua hàng</a>
                             </li>
@@ -209,24 +209,27 @@ if (mysqli_num_rows($checkip)) {
                 </div>
                 <div class="ml-5">
                     <h4 class="d2c_title mb-4">Tại sao bạn nên tham gia ?</h4>
-                    <p class="mb-4 text-info-1">Tham gia chương trình giới thiệu của VPSTTT không chỉ mang lại cơ hội
-                        nhận thưởng hấp dẫn mà còn giúp bạn kết nối với những người xung quanh. Với mỗi 5 lần giới thiệu
-                        thành công, bạn sẽ nhận ngay 100.000 VND vào tài khoản mua hàng hoặc 50.000 VND tiền mặt hoặc sử
-                        dụng VPS 1 tháng miễn phí, tạo ra nguồn thu nhập bổ
-                        sung dễ dàng và thú vị.</p>
-                    <p class="mb-4 text-info-1">Ngoài lợi ích cho người giới thiệu, người được giới thiệu cũng nhận được
-                        ưu đãi giảm ngay 15% cho hợp đồng đầu tiên. Đừng bỏ lỡ cơ hội này để lan tỏa giá trị và nhận về
-                        những phần quà hấp dẫn cùng VPSTTT!</p>
+                    <p class="mb-4 text-info-1">Chương trình "Giới thiệu khách hàng - Nhận ngay ưu đãi!" của VPSTTT mang
+                        đến cơ hội nhận thưởng hấp dẫn. Chỉ với 5 lần giới thiệu thành công, bạn sẽ nhận ngay 1 trong 3
+                        phần quà sau:
+                        1 tháng sử dụng VPS miễn phí (Cấu hình từ 1-1 đến 2-4),
+                        100.000 VNĐ vào tài khoản mua hàng,
+                        50.000 VNĐ chuyển khoản trực tiếp.
+                        Khi đủ 5/5 lượt giới thiệu sử dụng mã thành công, bạn sẽ đủ điều kiện nhận thưởng.</p>
+                    <p class="mb-4 text-info-1">Ưu đãi cho người được giới thiệu:
+                        Giảm ngay 15% khi đăng ký lần đầu tại VPSTTT,
+                        Tham gia ngay để không bỏ lỡ ưu đãi đặc biệt!</p>
                     <ul class="mb-4">
                         <li class="text-secondary inline-flex items-start font-semibold mb-3 ">
                             <span class="text-primary text-lg mr-4"><i class="far fa-check-circle"></i></span>
-                            Nhận 1 tháng sử dụng VPST miễn phí hoặc 100.000 VND vào tài khoản mua hàng cho 5 lần sử dụng
-                            mã giới thiệu.
+                            Chọn 1 trong 3 phần quà: 1 tháng sử dụng VPS (cấu hình từ 1-1 đến 2-4) miễn phí, 100.000 VND
+                            vào tài khoản mua hàng, 50.000 VND vào tài khoản ngân hàng.
                         </li>
                         <li class="text-secondary inline-flex items-start font-semibold mb-3">
                             <span class="text-primary text-lg mr-4"><i class="far fa-check-circle"></i></span>
                             Người được giới thiệu giảm ngay 15% khi đăng ký.
                         </li>
+                        <br>
                         <li class="text-secondary inline-flex items-start font-semibold mb-3">
                             <span class="text-primary text-lg mr-4"><i class="far fa-check-circle"></i></span>
                             Không giới hạn số lần giới thiệu.
@@ -245,7 +248,8 @@ if (mysqli_num_rows($checkip)) {
         class="bg-[url('../../../public/assets/images/landing/exp.png')] bg-no-repeat bg-cover py-10 md:py-14 xl:py-24"
         id="huongdan">
         <div class="container">
-            <h4 class="d2c_title text-center mb-10 text-3xl font-bold text-primary">Chỉ 3 bước đơn giản để nhận thưởng!
+            <h4 class="d2c_title text-center mb-10 text-3xl font-bold text-primary">Nhận ngay quà tặng với 3 bước cực
+                đơn giản!
             </h4>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
@@ -259,10 +263,10 @@ if (mysqli_num_rows($checkip)) {
                         </div>
                         <h5
                             class="text-lg text-secondary group-hover:text-white font-bold mb-4 transition-colors duration-300">
-                            Bước 1: Điền thông tin và lấy mã giới thiệu
+                            Bước 1: Đăng ký & nhận mã giới thiệu
                         </h5>
                         <p class="group-hover:text-[#EAEAEA] transition-colors duration-300">
-                            Điền thông tin của bạn và nhận mã giới thiệu độc quyền của bạn.
+                            Nhập thông tin của bạn để nhận mã giới thiệu độc quyền từ VPSTTT.
                         </p>
                     </div>
                 </div>
@@ -279,7 +283,7 @@ if (mysqli_num_rows($checkip)) {
                             Bước 2: Chia sẻ mã với bạn bè
                         </h5>
                         <p class="group-hover:text-[#EAEAEA] transition-colors duration-300">
-                            Gửi mã giới thiệu của bạn cho bạn bè qua mạng xã hội, tin nhắn hoặc email.
+                            Gửi mã giới thiệu cho bạn bè qua mạng xã hội, tin nhắn hoặc email để họ sử dụng.
                         </p>
                     </div>
                 </div>
@@ -293,10 +297,10 @@ if (mysqli_num_rows($checkip)) {
                         </div>
                         <h5
                             class="text-lg text-secondary group-hover:text-white font-bold mb-4 transition-colors duration-300">
-                            Bước 3: Nhận thưởng khi họ sử dụng
+                            Bước 3: Nhận thưởng ngay
                         </h5>
                         <p class="group-hover:text-[#EAEAEA] transition-colors duration-300">
-                            Nhận thưởng ngay khi bạn bè sử dụng mã giới thiệu của mình.
+                            Bạn sẽ nhận quà khi bạn bè sử dụng mã để đăng ký và hoàn tất giao dịch.
                         </p>
                     </div>
                 </div>
@@ -440,9 +444,10 @@ if (mysqli_num_rows($checkip)) {
                             <i class="fas fa-chevron-down text-gray-500"></i>
                         </button>
                         <div class="faq-content hidden mt-4 text-secondary">
-                            Bạn có thể nhận tiền thưởng 100.000 VND vào tài khoản mua hàng tại VPSTTT hoặc 50.000 VND
-                            vào tài khoản ngân hàng của bạn, hoặc quà tặng 1 tháng sử dụng VPS miễn phí nhé. Phần quà
-                            cực kỳ hấp dẫn, hãy nhận liền tay !!!
+                            Chỉ với 5 lần giới thiệu thành công, bạn sẽ nhận ngay 1 trong 3 phần quà sau:
+                            1 tháng sử dụng VPS miễn phí (Cấu hình từ 1-1 đến 2-4),
+                            100.000 VNĐ vào tài khoản mua hàng,
+                            50.000 VNĐ chuyển khoản trực tiếp
                         </div>
                     </div>
 
@@ -616,6 +621,76 @@ if (mysqli_num_rows($checkip)) {
         </div>
     </section>
 
+    <section
+        class="bg-[url('../../../public/assets/images/landing/exp.png')] bg-no-repeat bg-cover py-10 md:py-14 xl:py-24">
+        <div class="container">
+            <h4 class="d2c_title text-center mb-10 text-3xl font-bold text-primary">Hướng dẫn!</h4>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
+
+                <!-- Hướng dẫn lấy mã -->
+                <div class="card group hover:bg-primary transition-colors duration-300">
+                    <div class="card-body p-6 text-center">
+                        <div
+                            class="px-4 py-2 bg-primary-1 group-hover:bg-white rounded-std-1/2 inline-flex mb-4 transition-colors duration-300">
+                            <i class="fas fa-pencil-alt text-primary text-2xl"></i>
+                            <!-- Icon cho việc điền thông tin -->
+                        </div>
+                        <h5
+                            class="text-lg text-secondary group-hover:text-white font-bold mb-4 transition-colors duration-300">
+                            Hướng dẫn lấy mã giới thiệu
+                        </h5>
+                        <p class="group-hover:text-[#EAEAEA] transition-colors duration-300">
+                            Điền thông tin của bạn và nhận mã giới thiệu nhanh chóng.
+                        </p>
+                        <a href="#dangky"
+                            class="inline-flex py-2 px-4 bg-primary-1 font-bold rounded-std capitalize mt-4 text-primary group-hover:bg-white transition-colors duration-300">Lấy
+                            mã</a>
+                    </div>
+                </div>
+
+                <!-- Hướng dẫn sử dụng mã -->
+                <div class="card group hover:bg-primary transition-colors duration-300">
+                    <div class="card-body p-6 text-center">
+                        <div
+                            class="px-4 py-2 bg-primary-1 group-hover:bg-white rounded-std-1/2 inline-flex mb-4 transition-colors duration-300">
+                            <i class="fas fa-share-alt text-primary text-2xl"></i> <!-- Icon cho việc chia sẻ -->
+                        </div>
+                        <h5
+                            class="text-lg text-secondary group-hover:text-white font-bold mb-4 transition-colors duration-300">
+                            Hướng dẫn sử dụng mã giới thiệu
+                        </h5>
+                        <p class="group-hover:text-[#EAEAEA] transition-colors duration-300">
+                            Cách sử dụng mã giới thiệu để mua hàng tại VPSTTT.
+                        </p>
+                        <a href="#dangky"
+                            class="inline-flex py-2 px-4 bg-primary-1 font-bold rounded-std capitalize mt-4 text-primary group-hover:bg-white transition-colors duration-300">Chia
+                            sẻ mã</a>
+                    </div>
+                </div>
+
+                <!-- Hướng dẫn mua hàng -->
+                <div class="card group hover:bg-primary transition-colors duration-300">
+                    <div class="card-body p-6 text-center">
+                        <div
+                            class="px-4 py-2 bg-primary-1 group-hover:bg-white rounded-std-1/2 inline-flex mb-4 transition-colors duration-300">
+                            <i class="fas fa-shopping-cart text-primary text-2xl"></i> <!-- Icon cho việc mua hàng -->
+                        </div>
+                        <h5
+                            class="text-lg text-secondary group-hover:text-white font-bold mb-4 transition-colors duration-300">
+                            Hướng dẫn mua hàng
+                        </h5>
+                        <p class="group-hover:text-[#EAEAEA] transition-colors duration-300">
+                            Hướng dẫn mua hàng tại VPSTTT.
+                        </p>
+                        <a href="#dangky"
+                            class="inline-flex py-2 px-4 bg-primary-1 font-bold rounded-std capitalize mt-4 text-primary group-hover:bg-white transition-colors duration-300">Nhận
+                            thưởng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Thêm script reCAPTCHA -->
     <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
