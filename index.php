@@ -870,9 +870,9 @@ if (mysqli_num_rows($checkip)) {
 
     <script>
         const users = [
-            { name: "", time: "15 phút trước" },
-            { name: "Đoàn Thanh Nhàn", time: "50 phút trước" },
-            { name: "Bùi Tú Nhân", time: "56 phút trước" },
+            { name: "Mai Thị Ngọc Lan", time: "13 phút trước" },
+            { name: "Đoàn Thanh Sang", time: "47 phút trước" },
+            { name: "Đoàn Thị Trà Mi", time: "56 phút trước" },
         ];
 
         const successList = document.getElementById("success-list");
