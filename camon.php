@@ -235,7 +235,7 @@ if (isset($_POST['submit']) && isset($_POST['hoten']) && isset($_POST['sdt']) &&
             <hr style="margin-bottom:10px">
 
             <p><strong>Xem hướng dẫn sử dụng mã:</strong>
-                <a href="https://khuyenmai.vpsttt.com" class="link">https://khuyenmai.vpsttt.com/</a>
+                <a target="_blank" href="https://vpsttt.com/huong-dan-su-dung-ma-gioi-thieu-vpsttt-2025/" class="link">https://vpsttt.com/huong-dan-su-dung-ma-gioi-thieu-vpsttt-2025/</a>
             </p>
 
             <p><strong>Thể lệ chương trình:</strong>
@@ -268,6 +268,7 @@ if (isset($_POST['submit']) && isset($_POST['hoten']) && isset($_POST['sdt']) &&
 
 </html>';
                 $mail->Body = $bodymail;
+                $mail->addAttachment('the_le_chi_tiet_chuong_trinh.pdf');
                 $mail->CharSet = 'UTF-8';
                 $mail->send();
             } catch (Exception $e) {
@@ -308,11 +309,12 @@ if (isset($_POST['submit']) && isset($_POST['hoten']) && isset($_POST['sdt']) &&
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <!-- Main Style -->
     <link rel="stylesheet" href="./public/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
-<body class="landing">
+<body style="font-family: 'Roboto', sans-serif;" class="landing">
     <!-- Preloader Start -->
     <div class="preloader h-full fixed w-full z-50 bg-white transition duration-300">
         <img src="./public/assets/images/logo/logo.png"
@@ -328,7 +330,8 @@ if (isset($_POST['submit']) && isset($_POST['hoten']) && isset($_POST['sdt']) &&
                 <div class="flex items-center justify-between">
                     <div class="flex items-center">
                         <a href="/">
-                            <img src="./public/assets/images/logo/logo.png" class="w-36" alt="Logo Image">
+                            <img src="./public/assets/images/logo/logo.png" class="w-48 md:w-56" alt="Logo Image">
+                            <!-- Tăng kích thước logo -->
                         </a>
                     </div>
 
@@ -343,32 +346,35 @@ if (isset($_POST['submit']) && isset($_POST['hoten']) && isset($_POST['sdt']) &&
                     <div class="hidden lg:flex items-center ">
                         <ul class="font-medium flex flex-col lg:flex-row items-center relative py-0" id="js-clone-nav">
                             <li class="relative hidden lg:block">
-                                <a href="javascript:void(0)"
-                                    class="nav-link before:hidden py-2 pl-3 pr-4 text-secondary" data-toggler="active"
-                                    data-d2c-dropdown="dropdown1">
+                                <a href="javascript:void(0)" class="nav-link before:hidden py-2 pl-3 pr-4 text-black"
+                                    data-toggler="active" data-d2c-dropdown="dropdown1">
                                     <span class="mr-2">Hướng dẫn</span>
                                 </a>
                                 <!-- Sub Menu -->
                                 <ul class="mt-1 hidden absolute right-0 top-full py-3 px-4 border border-primary-1 rounded min-w-[180px] bg-white z-50"
                                     data-d2c-dropdownItem="down-element1">
                                     <li>
-                                        <un class="text-global font-semibold hover:text-primary text-base flex items-center py-1 transition-colors duration-500 capitalize"
-                                            href="./pages/registration.html">Sử dụng mã</a>
+                                        <a target="_blank"
+                                            class="text-black font-semibold hover:text-primary text-base flex items-center py-1 transition-colors duration-500 capitalize"
+                                            href="https://vpsttt.com/huong-dan-su-dung-ma-gioi-thieu-vpsttt-2025/">Sử
+                                            dụng mã</a>
                                     </li>
                                     <li>
-                                        <a class="text-global font-semibold hover:text-primary text-base flex items-center py-1 transition-colors duration-500 capitalize"
-                                            href="./pages/forgot.html">Mua hàng</a>
+                                        <a target="_blank"
+                                            class="text-black font-semibold hover:text-primary text-base flex items-center py-1 transition-colors duration-500 capitalize"
+                                            href="https://vpsttt.com/huong-dan-mua-vps-tren-vpsttt-com-2/">Mua hàng</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <un href="#d2c_services"
+                                <a target="_blank"
+                                    href="https://vpsttt.com/huong-dan-su-dung-ma-gioi-thieu-vpsttt-2025/"
                                     class="block lg:hidden py-2 pl-3 pr-4 font-semibold text-secondary hover:text-primary transition-colors duration-300">
                                     Hướng
                                     dẫn dùng mã</a>
                             </li>
                             <li>
-                                <a href="#d2c_services"
+                                <a target="_blank" href="https://vpsttt.com/huong-dan-mua-vps-tren-vpsttt-com-2/"
                                     class="block lg:hidden py-2 pl-3 pr-4 font-semibold text-secondary hover:text-primary transition-colors duration-300">Hướng
                                     dẫn mua hàng</a>
                             </li>
@@ -421,6 +427,23 @@ if (isset($_POST['submit']) && isset($_POST['hoten']) && isset($_POST['sdt']) &&
             background: rgba(24, 119, 242, 0.5);
             /* Màu xanh của Zalo */
         }
+
+        .vpsttt-bgcolor {
+            background-color: #7643c9;
+        }
+
+        .vpsttt-hvbgcolor:hover {
+            background-color: #7643c9;
+        }
+
+
+        .vpsttt-color {
+            color: #7643c9;
+        }
+
+        .vpsttt-hvcolor:hover {
+            color: #7643c9;
+        }
     </style>
 
     <div class="fixed bottom-6 left-6 flex flex-col space-y-4 z-[9999]">
@@ -452,12 +475,12 @@ if (isset($_POST['submit']) && isset($_POST['hoten']) && isset($_POST['sdt']) &&
         <div class="container text-center">
             <div
                 class="rounded-lg p-8 mb-10 max-w-2xl mx-auto transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                <h4 class="d2c_title text-center mb-4 text-3xl font-bold">
+                <h4 class="d2c_title vpsttt-color text-center mb-4 text-3xl font-bold">
                     <i class="fas fa-heart text-red-600"></i> Cảm ơn quý khách!
                 </h4>
-                <p class="text-info-1 text-lg">Chúng tôi xin chân thành cảm ơn quý khách đã quan tâm đến chương trình
+                <p class="text-black text-lg">Chúng tôi xin chân thành cảm ơn quý khách đã quan tâm đến chương trình
                     giới thiệu khách hàng của VPSTTT.</p>
-                <p class="text-info-1 text-lg mt-2">Mã giới thiệu độc quyền:</p>
+                <p class="text-black text-lg mt-2">Mã giới thiệu độc quyền:</p>
                 <div class="flex items-center justify-center">
                     <p class="font-bold text-4xl animate-color-change mr-4">
                         <span id="promo-code"><?= $_SESSION['code'] ?></span>
@@ -467,9 +490,13 @@ if (isset($_POST['submit']) && isset($_POST['hoten']) && isset($_POST['sdt']) &&
                         <i class="fas fa-copy mr-2"></i> Copy
                     </button>
                 </div>
-                <p class="text-info-1 text-lg mt-4">Liên hệ với chúng tôi qua Zalo OA hoặc Fanpage.</p>
+                <p class="text-info-1 text-lg mt-4">Liên hệ với chúng tôi qua <a target="_blank"
+                        class="underline text-blue-500" href="https://zalo.me/vpstttgroup">Zalo OA</a> hoặc <a
+                        target="_blank" class="underline text-blue-500"
+                        href="https://www.facebook.com/trang.vpsttt">Fanpage</a>.</p>
             </div>
         </div>
+
     </section>
     <style>
         @keyframes colorChange {
@@ -515,71 +542,130 @@ if (isset($_POST['submit']) && isset($_POST['hoten']) && isset($_POST['sdt']) &&
         }
     </script>
     <section
-        class="bg-[url('../../../public/assets/images/landing/exp.png')] bg-no-repeat bg-cover py-10 md:py-14 xl:py-24"
-        id="huongdan">
+        class="bg-[url('../../../public/assets/images/landing/exp.png')] bg-no-repeat bg-cover py-10 md:py-14 xl:py-24">
         <div class="container">
-            <h4 class="d2c_title text-center mb-10 text-3xl font-bold text-primary">Hướng dẫn!</h4>
+            <h4 class="d2c_title text-center mb-10 vpsttt-color">Thể lệ chương trình</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6 mb-4">
+
+                <!-- Card 1 -->
+                <div class="card group vpsttt-hvbgcolor transition-colors duration-300">
+                    <div class="card-body p-6">
+                        <div
+                            class="px-4 py-2 bg-primary-1 group-hover:bg-white rounded-std-1/2 inline-flex mb-4 transition-colors duration-300">
+                            <i class="fas fa-user-friends vpsttt-color text-xl"></i>
+                        </div>
+                        <h5
+                            class="text-lg text-black group-hover:text-white font-bold mb-4 transition-colors duration-300">
+                            Người giới thiệu</h5>
+                        <p class="group-hover:text-white transition-colors duration-300 text-black">
+                            <i class="group-hover:text-white fas fa-check-circle vpsttt-color text-sm mr-2"></i> Người
+                            giới thiệu là khách hàng
+                            đã sử dụng dịch vụ tại VPSTTT.
+                        </p>
+                        <p class="group-hover:text-white transition-colors duration-300 text-black">
+                            <i class="group-hover:text-white fas fa-check-circle vpsttt-color text-sm mr-2"></i> Sau khi
+                            thực hiện đủ theo yêu
+                            cầu chương trình, công ty kiểm tra dữ liệu trên hệ thống để xác minh quý khách hàng đã đủ
+                            điều kiện nhận thưởng.
+                        </p>
+                        <p class="group-hover:text-white transition-colors duration-300 text-black">
+                            <i class="group-hover:text-white fas fa-check-circle vpsttt-color text-sm mr-2"></i> VPSTTT
+                            sẽ trực tiếp liên hệ
+                            với bạn để trao đổi về phần thưởng.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card group vpsttt-hvbgcolor transition-colors duration-300">
+                    <div class="card-body p-6">
+                        <div
+                            class="px-4 py-2 bg-primary-1 group-hover:bg-white rounded-std-1/2 inline-flex mb-4 transition-colors duration-300">
+                            <i class="fas fa-gift vpsttt-color text-xl"></i>
+                        </div>
+                        <h5
+                            class="text-lg text-black group-hover:text-white font-bold mb-4 transition-colors duration-300">
+                            Người được giới thiệu</h5>
+                        <p class="group-hover:text-white transition-colors duration-300 text-black">
+                            <i class="group-hover:text-white fas fa-check-circle vpsttt-color text-sm mr-2"></i> Là
+                            những khách hàng mới chưa có hoặc đã có tài khoản tại vpsttt.com
+                        </p>
+                        <p class="group-hover:text-white transition-colors duration-300 text-black">
+                            <i class="group-hover:text-white fas fa-check-circle vpsttt-color text-sm mr-2"></i> Thực
+                            hiện đăng nhập và sử dụng
+                            mã giảm giá thành công thông qua người giới thiệu và được ghi nhận trong thời gian diễn ra
+                            chương trình.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section
+        class="bg-[url('../../../public/assets/images/landing/exp.png')] bg-no-repeat bg-cover py-10 md:py-14 xl:py-24">
+        <div class="container">
+            <h4 class="d2c_title text-center mb-10 text-3xl font-bold vpsttt-color">Hướng dẫn!</h4>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
 
                 <!-- Hướng dẫn lấy mã -->
-                <div class="card group hover:bg-primary transition-colors duration-300">
+                <div class="card group vpsttt-hvbgcolor transition-colors duration-300">
                     <div class="card-body p-6 text-center">
                         <div
                             class="px-4 py-2 bg-primary-1 group-hover:bg-white rounded-std-1/2 inline-flex mb-4 transition-colors duration-300">
-                            <i class="fas fa-pencil-alt text-primary text-2xl"></i>
+                            <i class="fas fa-pencil-alt vpsttt-color text-2xl"></i>
                             <!-- Icon cho việc điền thông tin -->
                         </div>
                         <h5
-                            class="text-lg text-secondary group-hover:text-white font-bold mb-4 transition-colors duration-300">
+                            class="text-lg text-black group-hover:text-white font-bold mb-4 transition-colors duration-300">
                             Hướng dẫn lấy mã giới thiệu
                         </h5>
-                        <p class="group-hover:text-[#EAEAEA] transition-colors duration-300">
+                        <p class="group-hover:text-white text-black transition-colors duration-300">
                             Điền thông tin của bạn và nhận mã giới thiệu nhanh chóng.
                         </p>
-                        <a href="#dangky"
-                            class="inline-flex py-2 px-4 bg-primary-1 font-bold rounded-std capitalize mt-4 text-primary group-hover:bg-white transition-colors duration-300">Lấy
-                            mã</a>
+                        <a target="_blank" href="https://vpsttt.com/huong-dan-lay-ma-gioi-thieu-vpsttt-2025/"
+                            class="inline-flex py-2 px-4 bg-primary-1 font-bold rounded-std capitalize mt-4 vpsttt-color group-hover:bg-white transition-colors duration-300">Xem
+                            ngay</a>
                     </div>
                 </div>
 
                 <!-- Hướng dẫn sử dụng mã -->
-                <div class="card group hover:bg-primary transition-colors duration-300">
+                <div class="card group vpsttt-hvbgcolor transition-colors duration-300">
                     <div class="card-body p-6 text-center">
                         <div
                             class="px-4 py-2 bg-primary-1 group-hover:bg-white rounded-std-1/2 inline-flex mb-4 transition-colors duration-300">
-                            <i class="fas fa-share-alt text-primary text-2xl"></i> <!-- Icon cho việc chia sẻ -->
+                            <i class="fas fa-share-alt vpsttt-color text-2xl"></i> <!-- Icon cho việc chia sẻ -->
                         </div>
                         <h5
-                            class="text-lg text-secondary group-hover:text-white font-bold mb-4 transition-colors duration-300">
+                            class="text-lg text-black group-hover:text-white font-bold mb-4 transition-colors duration-300">
                             Hướng dẫn sử dụng mã giới thiệu
                         </h5>
-                        <p class="group-hover:text-[#EAEAEA] transition-colors duration-300">
+                        <p class="group-hover:text-white text-black transition-colors duration-300">
                             Cách sử dụng mã giới thiệu để mua hàng tại VPSTTT.
                         </p>
-                        <a href="#dangky"
-                            class="inline-flex py-2 px-4 bg-primary-1 font-bold rounded-std capitalize mt-4 text-primary group-hover:bg-white transition-colors duration-300">Chia
-                            sẻ mã</a>
+                        <a target="_blank" href="https://vpsttt.com/huong-dan-su-dung-ma-gioi-thieu-vpsttt-2025/"
+                            class="inline-flex py-2 px-4 bg-primary-1 font-bold rounded-std capitalize mt-4 vpsttt-color group-hover:bg-white transition-colors duration-300">Xem
+                            ngay</a>
                     </div>
                 </div>
 
                 <!-- Hướng dẫn mua hàng -->
-                <div class="card group hover:bg-primary transition-colors duration-300">
+                <div class="card group vpsttt-hvbgcolor transition-colors duration-300">
                     <div class="card-body p-6 text-center">
                         <div
                             class="px-4 py-2 bg-primary-1 group-hover:bg-white rounded-std-1/2 inline-flex mb-4 transition-colors duration-300">
-                            <i class="fas fa-shopping-cart text-primary text-2xl"></i> <!-- Icon cho việc mua hàng -->
+                            <i class="fas fa-shopping-cart vpsttt-color text-2xl"></i> <!-- Icon cho việc mua hàng -->
                         </div>
                         <h5
-                            class="text-lg text-secondary group-hover:text-white font-bold mb-4 transition-colors duration-300">
+                            class="text-lg text-black group-hover:text-white font-bold mb-4 transition-colors duration-300">
                             Hướng dẫn mua hàng
                         </h5>
-                        <p class="group-hover:text-[#EAEAEA] transition-colors duration-300">
+                        <p class="group-hover:text-white text-black transition-colors duration-300">
                             Hướng dẫn mua hàng tại VPSTTT.
                         </p>
-                        <a href="#dangky"
-                            class="inline-flex py-2 px-4 bg-primary-1 font-bold rounded-std capitalize mt-4 text-primary group-hover:bg-white transition-colors duration-300">Nhận
-                            thưởng</a>
+                        <a target="_blank" href="https://vpsttt.com/huong-dan-mua-vps-tren-vpsttt-com-2/"
+                            class="inline-flex py-2 px-4 bg-primary-1 font-bold rounded-std capitalize mt-4 vpsttt-color group-hover:bg-white transition-colors duration-300">Xem
+                            ngay</a>
                     </div>
                 </div>
             </div>
@@ -592,24 +678,26 @@ if (isset($_POST['submit']) && isset($_POST['hoten']) && isset($_POST['sdt']) &&
             <div
                 class="flex flex-col md:flex-row items-center justify-between py-4 border-b border-[rgba(228,219,237,0.06)]">
                 <div class="mb-4 md:mb-0">
-                    <a href="https://vpsttt.com/"><img class="w-36" src="./public/assets/images/logo/logowhite.svg"
-                            alt="Logo Image"></a>
+                    <a href="https://vpsttt.com/"><img class="w-48 md:w-56"
+                            src="./public/assets/images/logo/logowhite.svg" alt="Logo Image"></a>
                 </div>
 
                 <div class="text-white text-center md:text-left">
-                    <p class="font-semibold text-lg">Thông tin liên hệ</p>
-                    <p>Email: <a href="mailto:lienhe@vpsttt.com"
+                    <p class="font-semibold text-lg text-white">Thông tin liên hệ</p>
+                    <p class="text-white">Email: <a href="mailto:lienhe@vpsttt.com"
                             class="text-white hover:underline">lienhe@vpsttt.com</a></p>
-                    <p>Hotline: <a href="tel:+84328812674" class="text-white hover:underline">+84 328 812 674</a></p>
-                    <p>Địa chỉ: Số 15 Đường B3, Phường Vĩnh Hòa, Thành phố Nha Trang, Tỉnh Khánh Hòa</p>
+                    <p class="text-white">Hotline: <a href="tel:+84328812674" class="text-white hover:underline">+84 328
+                            812 674</a></p>
+                    <p class="text-white">Địa chỉ: Số 15 Đường B3, Phường Vĩnh Hòa, Thành phố Nha Trang, Tỉnh Khánh Hòa
+                    </p>
                 </div>
 
                 <div class="mb-4 md:mb-0">
-                    <a target="_blank" href="https://designtocodes.com/privacy-policy/"
-                        class="text-white text-base font-semibold">Privacy Policy</a>
+                    <a target="_blank" href="https://vpsttt.com/chinh-sach-bao-mat/"
+                        class="text-white text-base font-semibold">Chính sách bảo mật</a>
                     <span class="text-white text-base font-semibold">|</span>
-                    <a target="_blank" href="https://designtocodes.com/terms/"
-                        class="text-white text-base font-semibold">Terms of Service</a>
+                    <a target="_blank" href="https://vpsttt.com/dieu-khoan-su-dung-dich-vu/"
+                        class="text-white text-base font-semibold">Điều khoản dịch vụ</a>
                 </div>
 
                 <div class="mb-4 md:mb-0 flex space-x-3">
@@ -628,7 +716,7 @@ if (isset($_POST['submit']) && isset($_POST['hoten']) && isset($_POST['sdt']) &&
             </div>
 
             <div class="py-4 text-center">
-                <p class="text-primary-1">All rights reserved by <a href="https://devttt.com/"
+                <p class="text-white">All rights reserved by <a href="https://devttt.com/"
                         class="text-white font-semibold" target="_blank">DEVTTT</a></p>
             </div>
         </div>

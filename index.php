@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <!-- Main Style -->
     <link rel="stylesheet" href="./public/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <?php
@@ -57,8 +58,26 @@ if (mysqli_num_rows($checkip)) {
 }
 
 ?>
+<style>
+    .vpsttt-bgcolor {
+        background-color: #7643c9;
+    }
 
-<body class="landing">
+    .vpsttt-hvbgcolor:hover {
+        background-color: #7643c9;
+    }
+
+
+    .vpsttt-color {
+        color: #7643c9;
+    }
+
+    .vpsttt-hvcolor:hover {
+        color: #7643c9;
+    }
+</style>
+
+<body style="font-family: 'Roboto', sans-serif;" class="landing">
     <!-- Preloader Start -->
     <div class="preloader h-full fixed w-full z-50 bg-white transition duration-300">
         <img src="./public/assets/images/logo/logo.png"
@@ -67,13 +86,14 @@ if (mysqli_num_rows($checkip)) {
     </div>
     <!-- Preloader End -->
     <!-- Header -->
-    <header class=" bg-white sticky top-0 w-full z-10">
+    <header class="bg-white sticky top-0 w-full z-10">
         <nav class="py-4 shadow-[0px_0px_27px_0px_rgba(0,0,0,0.06)]">
             <div class="container">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center">
                         <a href="/">
-                            <img src="./public/assets/images/logo/logo.png" class="w-36" alt="Logo Image">
+                            <img src="./public/assets/images/logo/logo.png" class="w-48 md:w-56" alt="Logo Image">
+                            <!-- Tăng kích thước logo -->
                         </a>
                     </div>
                     <div class="lg:hidden">
@@ -83,7 +103,7 @@ if (mysqli_num_rows($checkip)) {
                             <i class="fas fa-bars"></i>
                         </button>
                     </div>
-                    <div class="hidden lg:flex items-center ">
+                    <div class="hidden lg:flex items-center">
                         <ul class="font-medium flex flex-col lg:flex-row items-center relative py-0" id="js-clone-nav">
                             <li>
                                 <a href="index.php"
@@ -105,32 +125,38 @@ if (mysqli_num_rows($checkip)) {
                                 <ul class="mt-1 hidden absolute right-0 top-full py-3 px-4 border border-primary-1 rounded min-w-[180px] bg-white z-50"
                                     data-d2c-dropdownItem="down-element1">
                                     <li>
-                                        <a class="text-global font-semibold hover:text-primary text-base flex items-center py-1 transition-colors duration-500 capitalize"
-                                            href="#huongdan">Tham gia</a>
+                                        <a target="_blank"
+                                            class="text-black font-semibold hover:text-primary text-base flex items-center py-1 transition-colors duration-500 capitalize"
+                                            href="https://vpsttt.com/huong-dan-lay-ma-gioi-thieu-vpsttt-2025/">Tham
+                                            gia</a>
                                     </li>
                                     <li>
-                                        <un class="text-global font-semibold hover:text-primary text-base flex items-center py-1 transition-colors duration-500 capitalize"
-                                            href="">Sử dụng mã</a>
+                                        <a target="_blank"
+                                            class="text-black font-semibold hover:text-primary text-base flex items-center py-1 transition-colors duration-500 capitalize"
+                                            href="https://vpsttt.com/huong-dan-su-dung-ma-gioi-thieu-vpsttt-2025/">Sử
+                                            dụng mã</a>
                                     </li>
                                     <li>
-                                        <a class="text-global font-semibold hover:text-primary text-base flex items-center py-1 transition-colors duration-500 capitalize"
-                                            href="">Mua hàng</a>
+                                        <a target="_blank"
+                                            class="text-black font-semibold hover:text-primary text-base flex items-center py-1 transition-colors duration-500 capitalize"
+                                            href="https://vpsttt.com/huong-dan-mua-vps-tren-vpsttt-com-2/">Mua hàng</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#huongdan"
+                                <a target="_blank" href="https://vpsttt.com/huong-dan-lay-ma-gioi-thieu-vpsttt-2025/"
                                     class="block lg:hidden py-2 pl-3 pr-4 font-semibold text-secondary hover:text-primary transition-colors duration-300">Hướng
                                     dẫn lấy mã</a>
                             </li>
                             <li>
-                                <a href=""
+                                <a target="_blank"
+                                    href="https://vpsttt.com/huong-dan-su-dung-ma-gioi-thieu-vpsttt-2025/"
                                     class="block lg:hidden py-2 pl-3 pr-4 font-semibold text-secondary hover:text-primary transition-colors duration-300">
                                     Hướng
                                     dẫn dùng mã</a>
                             </li>
                             <li>
-                                <a href=""
+                                <a target="_blank" href="https://vpsttt.com/huong-dan-mua-vps-tren-vpsttt-com-2/"
                                     class="block lg:hidden py-2 pl-3 pr-4 font-semibold text-secondary hover:text-primary transition-colors duration-300">Hướng
                                     dẫn mua hàng</a>
                             </li>
@@ -146,7 +172,8 @@ if (mysqli_num_rows($checkip)) {
                             </li>
                             <li class="ml-3 mt-2 lg:mt-0">
                                 <a href="#dangky"
-                                    class="block py-2 px-5 pr-4 text-white bg-primary rounded-std font-bold">Bắt đầu</a>
+                                    class="block py-2 px-5 pr-4 vpsttt-bgcolor text-white border-2 border-purple-600 hover:bg-white vpsttt-hvcolor rounded-xl font-bold">Bắt
+                                    đầu</a>
                             </li>
                         </ul>
                     </div>
@@ -173,19 +200,18 @@ if (mysqli_num_rows($checkip)) {
         <div class="container">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
                 <div class="text-center lg:text-left order-2 md:order-1">
-                    <h1 class="text-3xl md:text-5xl text-primary font-semibold mb-8 leading-10 md:leading-[60px]">
+                    <h1 class="text-3xl md:text-5xl vpsttt-color font-semibold mb-8 leading-10 md:leading-[60px]">
                         GIỚI THIỆU BẠN BÈ - NHẬN NGAY <span class="font-extrabold">100.000 VND</span> VÀ <span
                             class="font-extrabold">15%</span> ƯU ĐÃI!
                     </h1>
-                    <p class="mb-4">Cùng VPSTTT lan tỏa giá trị, nhận quà hấp dẫn từ mọi giới thiệu thành công!</p>
+                    <p class="mb-4 text-black">Cùng VPSTTT lan tỏa giá trị, nhận quà hấp dẫn từ mọi giới thiệu thành
+                        công!</p>
 
                     <div class="flex items-center justify-center lg:justify-start mt-10">
                         <a href="#dangky"
-                            class="inline-flex py-2 px-6 text-white bg-primary rounded-std mr-2 font-bold">Nhận mã giới
-                            thiệu của bạn!</a>
-                        <!-- <button class="inline-flex items-center px-4 text-primary font-semibold rounded-std"><i
-                                class="far fa-play-circle text-4xl mr-2"></i> <span
-                                class="text-sm font-bold">Watch</span></button> -->
+                            class="inline-flex py-2 px-6 text-white vpsttt-bgcolor rounded-std mr-2 font-bold transform transition-transform duration-300 hover:scale-110">
+                            Nhận mã giới thiệu của bạn!
+                        </a>
                     </div>
                 </div>
                 <div class="order-1 md:order-2">
@@ -208,35 +234,35 @@ if (mysqli_num_rows($checkip)) {
                         alt="About Image">
                 </div>
                 <div class="ml-5">
-                    <h4 class="d2c_title mb-4">Tại sao bạn nên tham gia ?</h4>
-                    <p class="mb-4 text-info-1">Chương trình "Giới thiệu khách hàng - Nhận ngay ưu đãi!" của VPSTTT mang
+                    <h4 class="d2c_title mb-4 vpsttt-color">Tại sao bạn nên tham gia ?</h4>
+                    <p class="mb-4 text-black">Chương trình "Giới thiệu khách hàng - Nhận ngay ưu đãi!" của VPSTTT mang
                         đến cơ hội nhận thưởng hấp dẫn. Chỉ với 5 lần giới thiệu thành công, bạn sẽ nhận ngay 1 trong 3
                         phần quà sau:
                         1 tháng sử dụng VPS miễn phí (Cấu hình từ 1-1 đến 2-4),
                         100.000 VNĐ vào tài khoản mua hàng,
                         50.000 VNĐ chuyển khoản trực tiếp.
                         Khi đủ 5/5 lượt giới thiệu sử dụng mã thành công, bạn sẽ đủ điều kiện nhận thưởng.</p>
-                    <p class="mb-4 text-info-1">Ưu đãi cho người được giới thiệu:
+                    <p class="mb-4 text-black">Ưu đãi cho người được giới thiệu:
                         Giảm ngay 15% khi đăng ký lần đầu tại VPSTTT,
                         Tham gia ngay để không bỏ lỡ ưu đãi đặc biệt!</p>
                     <ul class="mb-4">
-                        <li class="text-secondary inline-flex items-start font-semibold mb-3 ">
-                            <span class="text-primary text-lg mr-4"><i class="far fa-check-circle"></i></span>
+                        <li class="text-black inline-flex items-start font-semibold mb-3 ">
+                            <span class="text-black text-lg mr-4"><i class="far fa-check-circle"></i></span>
                             Chọn 1 trong 3 phần quà: 1 tháng sử dụng VPS (cấu hình từ 1-1 đến 2-4) miễn phí, 100.000 VND
                             vào tài khoản mua hàng, 50.000 VND vào tài khoản ngân hàng.
                         </li>
-                        <li class="text-secondary inline-flex items-start font-semibold mb-3">
-                            <span class="text-primary text-lg mr-4"><i class="far fa-check-circle"></i></span>
+                        <li class="text-black inline-flex items-start font-semibold mb-3">
+                            <span class="text-black text-lg mr-4"><i class="far fa-check-circle"></i></span>
                             Người được giới thiệu giảm ngay 15% khi đăng ký.
                         </li>
                         <br>
-                        <li class="text-secondary inline-flex items-start font-semibold mb-3">
-                            <span class="text-primary text-lg mr-4"><i class="far fa-check-circle"></i></span>
+                        <li class="text-black inline-flex items-start font-semibold mb-3">
+                            <span class="text-black text-lg mr-4"><i class="far fa-check-circle"></i></span>
                             Không giới hạn số lần giới thiệu.
                         </li>
                     </ul>
                     <a href="#dangky"
-                        class="inline-flex py-2 px-8 text-white bg-primary font-bold rounded-std mr-2 capitalize">Thử
+                        class="inline-flex py-2 px-8 text-white vpsttt-bgcolor font-bold rounded-std mr-2 capitalize transform transition-transform duration-300 hover:scale-110">Thử
                         ngay</a>
                 </div>
             </div>
@@ -248,58 +274,58 @@ if (mysqli_num_rows($checkip)) {
         class="bg-[url('../../../public/assets/images/landing/exp.png')] bg-no-repeat bg-cover py-10 md:py-14 xl:py-24"
         id="huongdan">
         <div class="container">
-            <h4 class="d2c_title text-center mb-10 text-3xl font-bold text-primary">Nhận ngay quà tặng với 3 bước cực
+            <h4 class="d2c_title text-center mb-10 text-3xl font-bold vpsttt-color">Nhận ngay quà tặng với 3 bước cực
                 đơn giản!
             </h4>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
 
                 <!-- Bước 1 -->
-                <div class="card group hover:bg-primary transition-colors duration-300">
+                <div class="card group vpsttt-hvbgcolor transition-colors duration-300">
                     <div class="card-body p-6 text-center">
                         <div
                             class="px-4 py-2 bg-primary-1 group-hover:bg-white rounded-std-1/2 inline-flex mb-4 transition-colors duration-300">
-                            <i class="fas fa-key text-primary text-2xl"></i>
+                            <i class="fas fa-key vpsttt-color text-2xl"></i>
                         </div>
                         <h5
-                            class="text-lg text-secondary group-hover:text-white font-bold mb-4 transition-colors duration-300">
+                            class="text-lg text-black group-hover:text-white font-bold mb-4 transition-colors duration-300">
                             Bước 1: Đăng ký & nhận mã giới thiệu
                         </h5>
-                        <p class="group-hover:text-[#EAEAEA] transition-colors duration-300">
+                        <p class="group-hover:text-white text-black transition-colors duration-300">
                             Nhập thông tin của bạn để nhận mã giới thiệu độc quyền từ VPSTTT.
                         </p>
                     </div>
                 </div>
 
                 <!-- Bước 2 -->
-                <div class="card group hover:bg-primary transition-colors duration-300">
+                <div class="card group vpsttt-hvbgcolor transition-colors duration-300">
                     <div class="card-body p-6 text-center">
                         <div
                             class="px-4 py-2 bg-primary-1 group-hover:bg-white rounded-std-1/2 inline-flex mb-4 transition-colors duration-300">
-                            <i class="fas fa-bullhorn text-primary text-2xl"></i>
+                            <i class="fas fa-bullhorn vpsttt-color text-2xl"></i>
                         </div>
                         <h5
-                            class="text-lg text-secondary group-hover:text-white font-bold mb-4 transition-colors duration-300">
+                            class="text-lg text-black group-hover:text-white font-bold mb-4 transition-colors duration-300">
                             Bước 2: Chia sẻ mã với bạn bè
                         </h5>
-                        <p class="group-hover:text-[#EAEAEA] transition-colors duration-300">
+                        <p class="group-hover:text-white text-black transition-colors duration-300">
                             Gửi mã giới thiệu cho bạn bè qua mạng xã hội, tin nhắn hoặc email để họ sử dụng.
                         </p>
                     </div>
                 </div>
 
                 <!-- Bước 3 -->
-                <div class="card group hover:bg-primary transition-colors duration-300">
+                <div class="card group vpsttt-hvbgcolor transition-colors duration-300">
                     <div class="card-body p-6 text-center">
                         <div
                             class="px-4 py-2 bg-primary-1 group-hover:bg-white rounded-std-1/2 inline-flex mb-4 transition-colors duration-300">
-                            <i class="fas fa-coins text-primary text-2xl"></i>
+                            <i class="fas fa-coins vpsttt-color text-2xl"></i>
                         </div>
                         <h5
-                            class="text-lg text-secondary group-hover:text-white font-bold mb-4 transition-colors duration-300">
+                            class="text-lg text-black group-hover:text-white font-bold mb-4 transition-colors duration-300">
                             Bước 3: Nhận thưởng ngay
                         </h5>
-                        <p class="group-hover:text-[#EAEAEA] transition-colors duration-300">
+                        <p class="group-hover:text-white text-black transition-colors duration-300">
                             Bạn sẽ nhận quà khi bạn bè sử dụng mã để đăng ký và hoàn tất giao dịch.
                         </p>
                     </div>
@@ -308,7 +334,8 @@ if (mysqli_num_rows($checkip)) {
 
             <div class="text-center mt-10">
                 <a href="#dangky"
-                    class="inline-flex py-3 px-8 text-white bg-primary font-bold rounded-std capitalize">Bắt đầu
+                    class="inline-flex py-3 px-8 text-white vpsttt-bgcolor font-bold rounded-std capitalize transform transition-transform duration-300 hover:scale-110">Bắt
+                    đầu
                     ngay</a>
             </div>
         </div>
@@ -319,20 +346,20 @@ if (mysqli_num_rows($checkip)) {
         class="bg-[url('../../../public/assets/images/landing/exp.png')] bg-no-repeat bg-cover py-10 md:py-14 xl:py-24"
         id="loiich">
         <div class="container">
-            <h4 class="d2c_title text-center mb-10">Lợi ích nhận được khi đến với VPSTTT</h4>
+            <h4 class="d2c_title text-center mb-10 vpsttt-color">Lợi ích nhận được khi đến với VPSTTT</h4>
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6 mb-4">
 
                 <!-- Card -->
-                <div class="card group hover:bg-primary transition-colors duration-300">
+                <div class="card group vpsttt-hvbgcolor transition-colors duration-300">
                     <div class="card-body p-6">
                         <div
                             class="px-4 py-2 bg-primary-1 group-hover:bg-white rounded-std-1/2 inline-flex mb-4 transition-colors duration-300">
-                            <i class="fas fa-dollar-sign text-primary text-xl"></i>
+                            <i class="fas fa-dollar-sign vpsttt-color text-xl"></i>
                         </div>
                         <h5
-                            class="text-lg text-secondary group-hover:text-white font-bold mb-4 transition-colors duration-300">
+                            class="text-lg text-black group-hover:text-white font-bold mb-4 transition-colors duration-300">
                             Tiền Thưởng Ngay Khi Giới Thiệu</h5>
-                        <p class="group-hover:text-[#EAEAEA] transition-colors duration-300">Khi bạn giới thiệu thành
+                        <p class="group-hover:text-white transition-colors duration-300 text-black">Khi bạn giới thiệu thành
                             công 5 bạn bè, bạn sẽ nhận ngay 100.000 VND vào tài khoản mua hàng hoặc sử dụng VPS 1 tháng
                             miễn phí. Đây là cơ hội tuyệt vời
                             để kiếm thêm thu nhập mà không cần đầu tư nhiều thời gian hay công sức.</p>
@@ -340,16 +367,16 @@ if (mysqli_num_rows($checkip)) {
                 </div>
                 <!-- Card -->
                 <!-- Card -->
-                <div class="card group hover:bg-primary transition-colors duration-300">
+                <div class="card group vpsttt-hvbgcolor transition-colors duration-300">
                     <div class="card-body p-6">
                         <div
                             class="px-4 py-2 bg-primary-1 group-hover:bg-white rounded-std-1/2 inline-flex mb-4 transition-colors duration-300">
-                            <i class="fas fa-sync-alt text-primary text-xl"></i>
+                            <i class="fas fa-sync-alt vpsttt-color text-xl"></i>
                         </div>
                         <h5
-                            class="text-lg text-secondary group-hover:text-white font-bold mb-4  transition-colors duration-300">
+                            class="text-lg text-black group-hover:text-white font-bold mb-4  transition-colors duration-300">
                             Cơ Hội Nhận Thưởng Không Giới Hạn</h5>
-                        <p class="group-hover:text-[#EAEAEA] transition-colors duration-300">Bạn có thể giới thiệu bao
+                        <p class="group-hover:text-white transition-colors duration-300 text-black">Bạn có thể giới thiệu bao
                             nhiêu bạn bè tùy thích mà không bị giới hạn thời gian. Mỗi lần giới thiệu thành công đều
                             mang lại cho
                             bạn phần thưởng, giúp tối đa hóa lợi ích từ chương trình này. Hãy tận dụng cơ hội để gia
@@ -358,32 +385,32 @@ if (mysqli_num_rows($checkip)) {
                 </div>
                 <!-- Card -->
                 <!-- Card -->
-                <div class="card group hover:bg-primary transition-colors duration-300">
+                <div class="card group vpsttt-hvbgcolor transition-colors duration-300">
                     <div class="card-body p-6">
                         <div
                             class="px-4 py-2 bg-primary-1 group-hover:bg-white rounded-std-1/2 inline-flex mb-4 transition-colors duration-300">
-                            <i class="fas fa-tags text-primary text-xl"></i>
+                            <i class="fas fa-tags vpsttt-color text-xl"></i>
                         </div>
                         <h5
-                            class="text-lg text-secondary group-hover:text-white font-bold mb-4  transition-colors duration-300">
+                            class="text-lg text-black group-hover:text-white font-bold mb-4  transition-colors duration-300">
                             Ưu Đãi Hấp Dẫn Dành Cho Người Được Giới Thiệu</h5>
-                        <p class="group-hover:text-[#EAEAEA] transition-colors duration-300">Mỗi người được bạn giới
+                        <p class="group-hover:text-white transition-colors duration-300 text-black">Mỗi người được bạn giới
                             thiệu sẽ nhận được giảm giá 15% cho hợp đồng đầu tiên. Điều này không chỉ giúp bạn thu hút
                             nhiều người tham gia mà còn tạo ra giá trị thực cho họ ngay từ lần đầu tiên.</p>
                     </div>
                 </div>
                 <!-- Card -->
                 <!-- Card -->
-                <div class="card group hover:bg-primary transition-colors duration-300">
+                <div class="card group vpsttt-hvbgcolor transition-colors duration-300">
                     <div class="card-body p-6">
                         <div
                             class="px-4 py-2 bg-primary-1 group-hover:bg-white rounded-std-1/2 inline-flex mb-4 transition-colors duration-300">
-                            <i class="fas fa-headset text-primary text-xl"></i>
+                            <i class="fas fa-headset vpsttt-color text-xl"></i>
                         </div>
                         <h5
-                            class="text-lg text-secondary group-hover:text-white font-bold mb-4  transition-colors duration-300">
+                            class="text-lg text-black group-hover:text-white font-bold mb-4  transition-colors duration-300">
                             Dịch Vụ Khách Hàng Tận Tâm</h5>
-                        <p class="group-hover:text-[#EAEAEA] transition-colors duration-300">Chúng tôi luôn sẵn sàng hỗ
+                        <p class="group-hover:text-white transition-colors duration-300 text-black">Chúng tôi luôn sẵn sàng hỗ
                             trợ bạn 24/7. Đội ngũ chăm sóc khách hàng của VPSTTT luôn sẵn lòng giải đáp thắc mắc và hỗ
                             trợ bạn trong suốt quá trình tham gia, đảm bảo bạn có trải nghiệm tốt nhất.</p>
                     </div>
@@ -392,7 +419,7 @@ if (mysqli_num_rows($checkip)) {
             </div>
             <div class="text-center mt-20">
                 <a href="#dangky"
-                    class="inline-flex py-2 px-8 text-white bg-primary font-bold rounded-std mr-2 capitalize">Thử
+                    class="inline-flex py-2 px-8 text-white vpsttt-bgcolor font-bold rounded-std mr-2 capitalize transform transition-transform duration-300 hover:scale-110">Thử
                     ngay</a>
             </div>
         </div>
@@ -402,8 +429,8 @@ if (mysqli_num_rows($checkip)) {
     <section class="py-10 md:py-14 xl:py-24" id="cauhoi">
         <div class="container">
             <div class="text-center mb-10">
-                <h4 class="d2c_title text-center mb-2">Câu hỏi thường gặp</h4>
-                <p class="text-info-1">Dưới đây là những câu hỏi phổ biến mà khách hàng thường thắc mắc. Nếu bạn cần
+                <h4 class="d2c_title text-center mb-2 vpsttt-color">Câu hỏi thường gặp</h4>
+                <p class="text-black">Dưới đây là những câu hỏi phổ biến mà khách hàng thường thắc mắc. Nếu bạn cần
                     thêm thông tin, vui lòng liên hệ với chúng tôi!</p>
             </div>
 
@@ -413,11 +440,11 @@ if (mysqli_num_rows($checkip)) {
                     <!-- Câu hỏi 1 -->
                     <div class="border border-gray-300 rounded-lg p-6 bg-white shadow-md">
                         <button
-                            class="flex justify-between items-center w-full text-left font-semibold text-lg text-primary faq-toggle">
+                            class="flex justify-between items-center w-full text-left font-semibold text-lg vpsttt-color faq-toggle">
                             <span>Tôi có thể nhận thưởng bằng cách nào?</span>
-                            <i class="fas fa-chevron-down text-gray-500"></i>
+                            <i class="fas fa-chevron-down text-black"></i>
                         </button>
-                        <div class="faq-content hidden mt-4 text-secondary">
+                        <div class="faq-content hidden mt-4 text-black">
                             Bạn chỉ cần đăng nhập, lấy mã giới thiệu và chia sẻ với bạn bè. Khi họ sử dụng mã giới
                             thiệu, chúng tôi sẽ liên hệ và bạn sẽ nhận
                             thưởng ngay nhé!
@@ -427,11 +454,11 @@ if (mysqli_num_rows($checkip)) {
                     <!-- Câu hỏi 2 -->
                     <div class="border border-gray-300 rounded-lg p-6 bg-white shadow-md">
                         <button
-                            class="flex justify-between items-center w-full text-left font-semibold text-lg text-primary faq-toggle">
+                            class="flex justify-between items-center w-full text-left font-semibold text-lg vpsttt-color faq-toggle">
                             <span>Làm thế nào để chia sẻ mã giới thiệu?</span>
-                            <i class="fas fa-chevron-down text-gray-500"></i>
+                            <i class="fas fa-chevron-down text-black"></i>
                         </button>
-                        <div class="faq-content hidden mt-4 text-secondary">
+                        <div class="faq-content hidden mt-4 text-black">
                             Bạn có thể chia sẻ mã giới thiệu qua Facebook, Zalo, email hoặc tin nhắn trực tiếp.
                         </div>
                     </div>
@@ -439,11 +466,11 @@ if (mysqli_num_rows($checkip)) {
                     <!-- Câu hỏi 3 -->
                     <div class="border border-gray-300 rounded-lg p-6 bg-white shadow-md">
                         <button
-                            class="flex justify-between items-center w-full text-left font-semibold text-lg text-primary faq-toggle">
+                            class="flex justify-between items-center w-full text-left font-semibold text-lg vpsttt-color faq-toggle">
                             <span>Phần thưởng là gì?</span>
-                            <i class="fas fa-chevron-down text-gray-500"></i>
+                            <i class="fas fa-chevron-down text-black"></i>
                         </button>
-                        <div class="faq-content hidden mt-4 text-secondary">
+                        <div class="faq-content hidden mt-4 text-black">
                             Chỉ với 5 lần giới thiệu thành công, bạn sẽ nhận ngay 1 trong 3 phần quà sau:
                             1 tháng sử dụng VPS miễn phí (Cấu hình từ 1-1 đến 2-4),
                             100.000 VNĐ vào tài khoản mua hàng,
@@ -454,11 +481,11 @@ if (mysqli_num_rows($checkip)) {
                     <!-- Câu hỏi 4 -->
                     <div class="border border-gray-300 rounded-lg p-6 bg-white shadow-md">
                         <button
-                            class="flex justify-between items-center w-full text-left font-semibold text-lg text-primary faq-toggle">
+                            class="flex justify-between items-center w-full text-left font-semibold text-lg vpsttt-color faq-toggle">
                             <span>Tôi có thể giới thiệu bao nhiêu người?</span>
-                            <i class="fas fa-chevron-down text-gray-500"></i>
+                            <i class="fas fa-chevron-down text-black"></i>
                         </button>
-                        <div class="faq-content hidden mt-4 text-secondary">
+                        <div class="faq-content hidden mt-4 text-black">
                             Không giới hạn! Với mỗi mã giới thiệu sẽ sử dụng được 5 lần cho mỗi thành viên mới. Bạn có
                             thể giới thiệu càng nhiều người càng tốt và nhận thưởng tương ứng.
                         </div>
@@ -576,8 +603,8 @@ if (mysqli_num_rows($checkip)) {
         id="dangky">
         <div class="container">
             <div class="text-center mb-10">
-                <h4 class="d2c_title text-center mb-2">Đăng ký tham gia tại đây!</h4>
-                <p class="text-info-1">Đăng ký tham gia chương trình giới thiệu khách hàng mới của VPSTTT cực kỳ dễ dàng
+                <h4 class="d2c_title text-center mb-2 vpsttt-color">Đăng ký tham gia tại đây!</h4>
+                <p class="text-black">Đăng ký tham gia chương trình giới thiệu khách hàng mới của VPSTTT cực kỳ dễ dàng
                     và nhanh chóng <br>
                     Chỉ với một nút nhấn đã đăng ký thành công.</p>
             </div>
@@ -585,7 +612,7 @@ if (mysqli_num_rows($checkip)) {
                 <div class="col-start-2 col-end-12 col-span-4">
                     <form action="camon" method="POST" id="registerForm" class="w-full">
                         <div class="grid grid-cols-1 gap-6">
-                            <div class="mb-4 text-left">
+                            <div class="mb-4 text-left text-black">
                                 <label for="hoten">Họ và tên</label>
                                 <input type="text" id="hoten" class="form-control" name="hoten"
                                     placeholder="Trần Quang Hào" required>
@@ -593,13 +620,13 @@ if (mysqli_num_rows($checkip)) {
                             </div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="mb-4 text-left">
+                            <div class="mb-4 text-left text-black">
                                 <label for="email">Địa chỉ Email</label>
                                 <input type="email" id="email" class="form-control" name="email"
                                     placeholder="tranhao@gmail.com" required>
                                 <p id="email-error" class="text-red-500 text-sm mt-1 hidden"></p>
                             </div>
-                            <div class="mb-4 text-left relative">
+                            <div class="mb-4 text-left relative text-black">
                                 <label for="sdt">Số điện thoại</label>
                                 <input type="tel" id="sdt" class="form-control" name="sdt" placeholder="0328812674"
                                     required>
@@ -624,68 +651,68 @@ if (mysqli_num_rows($checkip)) {
     <section
         class="bg-[url('../../../public/assets/images/landing/exp.png')] bg-no-repeat bg-cover py-10 md:py-14 xl:py-24">
         <div class="container">
-            <h4 class="d2c_title text-center mb-10 text-3xl font-bold text-primary">Hướng dẫn!</h4>
+            <h4 class="d2c_title text-center mb-10 text-3xl font-bold vpsttt-color">Hướng dẫn!</h4>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
 
                 <!-- Hướng dẫn lấy mã -->
-                <div class="card group hover:bg-primary transition-colors duration-300">
+                <div class="card group vpsttt-hvbgcolor transition-colors duration-300">
                     <div class="card-body p-6 text-center">
                         <div
                             class="px-4 py-2 bg-primary-1 group-hover:bg-white rounded-std-1/2 inline-flex mb-4 transition-colors duration-300">
-                            <i class="fas fa-pencil-alt text-primary text-2xl"></i>
+                            <i class="fas fa-pencil-alt vpsttt-color text-2xl"></i>
                             <!-- Icon cho việc điền thông tin -->
                         </div>
                         <h5
-                            class="text-lg text-secondary group-hover:text-white font-bold mb-4 transition-colors duration-300">
+                            class="text-lg text-black group-hover:text-white font-bold mb-4 transition-colors duration-300">
                             Hướng dẫn lấy mã giới thiệu
                         </h5>
-                        <p class="group-hover:text-[#EAEAEA] transition-colors duration-300">
+                        <p class="group-hover:text-white text-black transition-colors duration-300">
                             Điền thông tin của bạn và nhận mã giới thiệu nhanh chóng.
                         </p>
-                        <a href="#dangky"
-                            class="inline-flex py-2 px-4 bg-primary-1 font-bold rounded-std capitalize mt-4 text-primary group-hover:bg-white transition-colors duration-300">Lấy
-                            mã</a>
+                        <a target="_blank" href="https://vpsttt.com/huong-dan-lay-ma-gioi-thieu-vpsttt-2025/"
+                            class="inline-flex py-2 px-4 bg-primary-1 font-bold rounded-std capitalize mt-4 vpsttt-color group-hover:bg-white transition-colors duration-300">Xem
+                            ngay</a>
                     </div>
                 </div>
 
                 <!-- Hướng dẫn sử dụng mã -->
-                <div class="card group hover:bg-primary transition-colors duration-300">
+                <div class="card group vpsttt-hvbgcolor transition-colors duration-300">
                     <div class="card-body p-6 text-center">
                         <div
                             class="px-4 py-2 bg-primary-1 group-hover:bg-white rounded-std-1/2 inline-flex mb-4 transition-colors duration-300">
-                            <i class="fas fa-share-alt text-primary text-2xl"></i> <!-- Icon cho việc chia sẻ -->
+                            <i class="fas fa-share-alt vpsttt-color text-2xl"></i> <!-- Icon cho việc chia sẻ -->
                         </div>
                         <h5
-                            class="text-lg text-secondary group-hover:text-white font-bold mb-4 transition-colors duration-300">
+                            class="text-lg text-black group-hover:text-white font-bold mb-4 transition-colors duration-300">
                             Hướng dẫn sử dụng mã giới thiệu
                         </h5>
-                        <p class="group-hover:text-[#EAEAEA] transition-colors duration-300">
+                        <p class="group-hover:text-white text-black transition-colors duration-300">
                             Cách sử dụng mã giới thiệu để mua hàng tại VPSTTT.
                         </p>
-                        <a href="#dangky"
-                            class="inline-flex py-2 px-4 bg-primary-1 font-bold rounded-std capitalize mt-4 text-primary group-hover:bg-white transition-colors duration-300">Chia
-                            sẻ mã</a>
+                        <a target="_blank" href="https://vpsttt.com/huong-dan-su-dung-ma-gioi-thieu-vpsttt-2025/"
+                            class="inline-flex py-2 px-4 bg-primary-1 font-bold rounded-std capitalize mt-4 vpsttt-color group-hover:bg-white transition-colors duration-300">Xem
+                            ngay</a>
                     </div>
                 </div>
 
                 <!-- Hướng dẫn mua hàng -->
-                <div class="card group hover:bg-primary transition-colors duration-300">
+                <div class="card group vpsttt-hvbgcolor transition-colors duration-300">
                     <div class="card-body p-6 text-center">
                         <div
                             class="px-4 py-2 bg-primary-1 group-hover:bg-white rounded-std-1/2 inline-flex mb-4 transition-colors duration-300">
-                            <i class="fas fa-shopping-cart text-primary text-2xl"></i> <!-- Icon cho việc mua hàng -->
+                            <i class="fas fa-shopping-cart vpsttt-color text-2xl"></i> <!-- Icon cho việc mua hàng -->
                         </div>
                         <h5
-                            class="text-lg text-secondary group-hover:text-white font-bold mb-4 transition-colors duration-300">
+                            class="text-lg text-black group-hover:text-white font-bold mb-4 transition-colors duration-300">
                             Hướng dẫn mua hàng
                         </h5>
-                        <p class="group-hover:text-[#EAEAEA] transition-colors duration-300">
+                        <p class="group-hover:text-white text-black transition-colors duration-300">
                             Hướng dẫn mua hàng tại VPSTTT.
                         </p>
-                        <a href="#dangky"
-                            class="inline-flex py-2 px-4 bg-primary-1 font-bold rounded-std capitalize mt-4 text-primary group-hover:bg-white transition-colors duration-300">Nhận
-                            thưởng</a>
+                        <a target="_blank" href="https://vpsttt.com/huong-dan-mua-vps-tren-vpsttt-com-2/"
+                            class="inline-flex py-2 px-4 bg-primary-1 font-bold rounded-std capitalize mt-4 vpsttt-color group-hover:bg-white transition-colors duration-300">Xem
+                            ngay</a>
                     </div>
                 </div>
             </div>
@@ -749,7 +776,7 @@ if (mysqli_num_rows($checkip)) {
 
                 // Bật hoặc tắt nút Submit
                 submitBtn.disabled = !isValid || !isRecaptchaValid; // Kiểm tra cả reCAPTCHA
-                submitBtn.classList.toggle("bg-primary", isValid && isRecaptchaValid);
+                submitBtn.classList.toggle("vpsttt-bgcolor", isValid && isRecaptchaValid);
                 submitBtn.classList.toggle("bg-gray-400", !isValid || !isRecaptchaValid);
                 submitBtn.classList.toggle("cursor-not-allowed", !isValid || !isRecaptchaValid);
             }
@@ -843,9 +870,9 @@ if (mysqli_num_rows($checkip)) {
 
     <script>
         const users = [
-            { name: "Nguyễn Văn A", time: "5 phút trước" },
-            { name: "Trần Thị B", time: "10 phút trước" },
-            { name: "Lê Văn C", time: "15 phút trước" },
+            { name: "", time: "15 phút trước" },
+            { name: "Đoàn Thanh Nhàn", time: "50 phút trước" },
+            { name: "Bùi Tú Nhân", time: "56 phút trước" },
         ];
 
         const successList = document.getElementById("success-list");
@@ -889,7 +916,7 @@ if (mysqli_num_rows($checkip)) {
         showUsers();
     </script>
     <!-- footer -->
-    <footer class="bg-primary">
+    <footer class="vpsttt-bgcolor">
         <div class="container">
             <div class="text-center py-24 border-b border-[rgba(228,219,237,0.06)]">
                 <h2 class="text-4xl text-white font-bold mb-5">Bạn đã sẵn sàng nắm bắt cơ hội này chưa?</h2>
@@ -898,7 +925,7 @@ if (mysqli_num_rows($checkip)) {
                     Mỗi kết nối là một bước tiến gần hơn đến mục tiêu của bạn. Nắm bắt cơ hội này và cùng chúng tôi phát
                     triển! <br>
                     <a href="#dangky"
-                        class="inline-flex py-2 px-8 text-primary font-bold bg-white rounded-std mr-2 mt-3">Bắt đầu
+                        class="inline-flex py-2 px-8 text-primary font-bold bg-white rounded-std mr-2 mt-3 transform transition-transform duration-300 hover:scale-110">Bắt đầu
                         ngay</a>
                 </p>
             </div>
@@ -906,24 +933,24 @@ if (mysqli_num_rows($checkip)) {
             <div
                 class="flex flex-col md:flex-row items-center justify-between py-4 border-b border-[rgba(228,219,237,0.06)]">
                 <div class="mb-4 md:mb-0">
-                    <a href="https://vpsttt.com/"><img class="w-36" src="./public/assets/images/logo/logowhite.svg"
+                    <a href="https://vpsttt.com/"><img class="w-48 md:w-56" src="./public/assets/images/logo/logowhite.svg"
                             alt="Logo Image"></a>
                 </div>
 
                 <div class="text-white text-center md:text-left">
-                    <p class="font-semibold text-lg">Thông tin liên hệ</p>
-                    <p>Email: <a href="mailto:lienhe@vpsttt.com"
+                    <p class="font-semibold text-lg text-white">Thông tin liên hệ</p>
+                    <p class="text-white">Email: <a href="mailto:lienhe@vpsttt.com"
                             class="text-white hover:underline">lienhe@vpsttt.com</a></p>
-                    <p>Hotline: <a href="tel:+84328812674" class="text-white hover:underline">+84 328 812 674</a></p>
-                    <p>Địa chỉ: Số 15 Đường B3, Phường Vĩnh Hòa, Thành phố Nha Trang, Tỉnh Khánh Hòa</p>
+                    <p class="text-white">Hotline: <a href="tel:+84328812674" class="text-white hover:underline">+84 328 812 674</a></p>
+                    <p class="text-white">Địa chỉ: Số 15 Đường B3, Phường Vĩnh Hòa, Thành phố Nha Trang, Tỉnh Khánh Hòa</p>
                 </div>
 
                 <div class="mb-4 md:mb-0">
-                    <a target="_blank" href="https://designtocodes.com/privacy-policy/"
-                        class="text-white text-base font-semibold">Privacy Policy</a>
+                    <a target="_blank" href="https://vpsttt.com/chinh-sach-bao-mat/"
+                        class="text-white text-base font-semibold">Chính sách bảo mật</a>
                     <span class="text-white text-base font-semibold">|</span>
-                    <a target="_blank" href="https://designtocodes.com/terms/"
-                        class="text-white text-base font-semibold">Terms of Service</a>
+                    <a target="_blank" href="https://vpsttt.com/dieu-khoan-su-dung-dich-vu/"
+                        class="text-white text-base font-semibold">Điều khoản dịch vụ</a>
                 </div>
 
                 <div class="mb-4 md:mb-0 flex space-x-3">
@@ -942,7 +969,7 @@ if (mysqli_num_rows($checkip)) {
             </div>
 
             <div class="py-4 text-center">
-                <p class="text-primary-1">All rights reserved by <a href="https://devttt.com/"
+                <p class="text-white">All rights reserved by <a href="https://devttt.com/"
                         class="text-white font-semibold" target="_blank">DEVTTT</a></p>
             </div>
         </div>
