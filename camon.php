@@ -63,8 +63,8 @@ if (isset($_POST['submit']) && isset($_POST['hoten']) && isset($_POST['sdt']) &&
                 $sql_khuyenmai = "INSERT INTO khuyenmai (email, phone, name, code,date) VALUES ('$email', '$phone', '$name', '$code','$currentDate')";
                 $khuyenmai = mysqli_query($conn, $sql_khuyenmai);
                 //xóa code vừa sử dụng
-                // $sql_delcode = "DELETE FROM code WHERE code = '$code'";
-                // $delcode = mysqli_query($conn, $sql_delcode);
+                $sql_delcode = "DELETE FROM code WHERE code = '$code'";
+                $delcode = mysqli_query($conn, $sql_delcode);
                 $mail = new PHPMailer(true);
                 $mail->isSMTP();  // Sử dụng SMTP
                 $mail->Host = 'smtp.gmail.com';
