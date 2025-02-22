@@ -268,7 +268,7 @@ if (isset($_POST['submit']) && isset($_POST['hoten']) && isset($_POST['sdt']) &&
 
 </html>';
                 $mail->Body = $bodymail;
-                $mail->addAttachment('the_le_chi_tiet_chuong_trinh.pdf');
+                $mail->addAttachment('the_le_chi_tiet_chuong_trinh1.pdf');
                 $mail->CharSet = 'UTF-8';
                 $mail->send();
             } catch (Exception $e) {
