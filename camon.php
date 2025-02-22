@@ -229,7 +229,7 @@ if (isset($_POST['submit']) && isset($_POST['hoten']) && isset($_POST['sdt']) &&
                 <li>1. Chia sẻ mã với bạn bè chưa có tài khoản tại VPSTTT.</li>
                 <li>2. Người được giới thiệu đăng ký và nhập mã 15% khi mua dịch vụ.</li>
                 <li>3. Họ phát sinh giao dịch hợp lệ tại VPSTTT.</li>
-                <li>4. Mã được dùng đủ 5 lần, bạn nhận thưởng ngay!</li>
+                <li>4. Mã được dùng mỗi 5 lần, bạn nhận thưởng ngay!</li>
             </ul>
 
             <hr style="margin-bottom:10px">

@@ -200,13 +200,13 @@ if (mysqli_num_rows($checkip)) {
         <div class="container">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
                 <div class="text-center lg:text-left order-2 md:order-1">
-                    <h1 class="text-3xl md:text-5xl vpsttt-color font-semibold mb-8 leading-10 md:leading-[60px]">
-                        GIỚI THIỆU BẠN BÈ - NHẬN NGAY <span class="font-extrabold">100.000 VND</span> VÀ <span
-                            class="font-extrabold">15%</span> ƯU ĐÃI!
+                    <h1 class="text-2xl md:text-5xl vpsttt-color font-semibold mb-8 leading-10 md:leading-[60px]">
+                        GIỚI THIỆU BẠN BÈ - NHẬN NGAY<br><span class="font-extrabold">15%</span> ƯU ĐÃI VÀ <span
+                            class="font-extrabold">50.000 VND</span> VÀ <span class="font-extrabold">10%</span> GIÁ TRỊ
+                        HÓA ĐƠN </span>
                     </h1>
                     <p class="mb-4 text-black">Cùng VPSTTT lan tỏa giá trị, nhận quà hấp dẫn từ mọi giới thiệu thành
                         công!</p>
-
                     <div class="flex items-center justify-center lg:justify-start mt-10">
                         <a href="#dangky"
                             class="inline-flex py-2 px-6 text-white vpsttt-bgcolor rounded-std mr-2 font-bold transform transition-transform duration-300 hover:scale-110">
@@ -236,11 +236,10 @@ if (mysqli_num_rows($checkip)) {
                 <div class="ml-5">
                     <h4 class="d2c_title mb-4 vpsttt-color">Tại sao bạn nên tham gia ?</h4>
                     <p class="mb-4 text-black">Chương trình "Giới thiệu khách hàng - Nhận ngay ưu đãi!" của VPSTTT mang
-                        đến cơ hội nhận thưởng hấp dẫn. Chỉ với 5 lần giới thiệu thành công, bạn sẽ nhận ngay 1 trong 3
+                        đến cơ hội nhận thưởng hấp dẫn. Chỉ với 5 lần giới thiệu thành công, bạn sẽ nhận 2
                         phần quà sau:
-                        1 tháng sử dụng VPS miễn phí (Cấu hình từ 1-1 đến 2-4),
-                        100.000 VNĐ vào tài khoản mua hàng,
-                        50.000 VNĐ chuyển khoản trực tiếp.
+                        50.000 VNĐ vào tài khoản mua hàng,
+                        10% giá trị hóa đơn khi người được giới thiệu sử dụng mã.
                         Khi đủ 5/5 lượt giới thiệu sử dụng mã thành công, bạn sẽ đủ điều kiện nhận thưởng.</p>
                     <p class="mb-4 text-black">Ưu đãi cho người được giới thiệu:
                         Giảm ngay 15% khi đăng ký lần đầu tại VPSTTT,
@@ -248,8 +247,7 @@ if (mysqli_num_rows($checkip)) {
                     <ul class="mb-4">
                         <li class="text-black inline-flex items-start font-semibold mb-3 ">
                             <span class="text-black text-lg mr-4"><i class="far fa-check-circle"></i></span>
-                            Chọn 1 trong 3 phần quà: 1 tháng sử dụng VPS (cấu hình từ 1-1 đến 2-4) miễn phí, 100.000 VND
-                            vào tài khoản mua hàng, 50.000 VND vào tài khoản ngân hàng.
+                            2 phần quà: 50.000 VND vào tài khoản mua hàng và 10% giá trị hóa đơn.
                         </li>
                         <li class="text-black inline-flex items-start font-semibold mb-3">
                             <span class="text-black text-lg mr-4"><i class="far fa-check-circle"></i></span>
@@ -359,9 +357,10 @@ if (mysqli_num_rows($checkip)) {
                         <h5
                             class="text-lg text-black group-hover:text-white font-bold mb-4 transition-colors duration-300">
                             Tiền Thưởng Ngay Khi Giới Thiệu</h5>
-                        <p class="group-hover:text-white transition-colors duration-300 text-black">Khi bạn giới thiệu thành
-                            công 5 bạn bè, bạn sẽ nhận ngay 100.000 VND vào tài khoản mua hàng hoặc sử dụng VPS 1 tháng
-                            miễn phí. Đây là cơ hội tuyệt vời
+                        <p class="group-hover:text-white transition-colors duration-300 text-black">Khi bạn giới thiệu
+                            thành
+                            công 5 bạn bè, bạn sẽ nhận ngay 50.000 VND vào tài khoản mua hàng và 10% giá trị đơn hàng.
+                            Đây là cơ hội tuyệt vời
                             để kiếm thêm thu nhập mà không cần đầu tư nhiều thời gian hay công sức.</p>
                     </div>
                 </div>
@@ -376,8 +375,9 @@ if (mysqli_num_rows($checkip)) {
                         <h5
                             class="text-lg text-black group-hover:text-white font-bold mb-4  transition-colors duration-300">
                             Cơ Hội Nhận Thưởng Không Giới Hạn</h5>
-                        <p class="group-hover:text-white transition-colors duration-300 text-black">Bạn có thể giới thiệu bao
-                            nhiêu bạn bè tùy thích mà không bị giới hạn thời gian. Mỗi lần giới thiệu thành công đều
+                        <p class="group-hover:text-white transition-colors duration-300 text-black">Bạn có thể giới
+                            thiệu bao
+                            nhiêu bạn bè tùy thích mà không bị giới hạn số lần. Mỗi lần giới thiệu thành công đều
                             mang lại cho
                             bạn phần thưởng, giúp tối đa hóa lợi ích từ chương trình này. Hãy tận dụng cơ hội để gia
                             tăng thu nhập một cách tối đa!</p>
@@ -394,7 +394,8 @@ if (mysqli_num_rows($checkip)) {
                         <h5
                             class="text-lg text-black group-hover:text-white font-bold mb-4  transition-colors duration-300">
                             Ưu Đãi Hấp Dẫn Dành Cho Người Được Giới Thiệu</h5>
-                        <p class="group-hover:text-white transition-colors duration-300 text-black">Mỗi người được bạn giới
+                        <p class="group-hover:text-white transition-colors duration-300 text-black">Mỗi người được bạn
+                            giới
                             thiệu sẽ nhận được giảm giá 15% cho hợp đồng đầu tiên. Điều này không chỉ giúp bạn thu hút
                             nhiều người tham gia mà còn tạo ra giá trị thực cho họ ngay từ lần đầu tiên.</p>
                     </div>
@@ -410,7 +411,8 @@ if (mysqli_num_rows($checkip)) {
                         <h5
                             class="text-lg text-black group-hover:text-white font-bold mb-4  transition-colors duration-300">
                             Dịch Vụ Khách Hàng Tận Tâm</h5>
-                        <p class="group-hover:text-white transition-colors duration-300 text-black">Chúng tôi luôn sẵn sàng hỗ
+                        <p class="group-hover:text-white transition-colors duration-300 text-black">Chúng tôi luôn sẵn
+                            sàng hỗ
                             trợ bạn 24/7. Đội ngũ chăm sóc khách hàng của VPSTTT luôn sẵn lòng giải đáp thắc mắc và hỗ
                             trợ bạn trong suốt quá trình tham gia, đảm bảo bạn có trải nghiệm tốt nhất.</p>
                     </div>
@@ -471,10 +473,9 @@ if (mysqli_num_rows($checkip)) {
                             <i class="fas fa-chevron-down text-black"></i>
                         </button>
                         <div class="faq-content hidden mt-4 text-black">
-                            Chỉ với 5 lần giới thiệu thành công, bạn sẽ nhận ngay 1 trong 3 phần quà sau:
-                            1 tháng sử dụng VPS miễn phí (Cấu hình từ 1-1 đến 2-4),
-                            100.000 VNĐ vào tài khoản mua hàng,
-                            50.000 VNĐ chuyển khoản trực tiếp
+                            Chỉ với 5 lần giới thiệu thành công, bạn sẽ nhận ngay 2 phần quà sau:
+                            50.000 VNĐ vào tài khoản mua hàng và
+                            10% giá trị đơn hàng
                         </div>
                     </div>
 
@@ -486,8 +487,7 @@ if (mysqli_num_rows($checkip)) {
                             <i class="fas fa-chevron-down text-black"></i>
                         </button>
                         <div class="faq-content hidden mt-4 text-black">
-                            Không giới hạn! Với mỗi mã giới thiệu sẽ sử dụng được 5 lần cho mỗi thành viên mới. Bạn có
-                            thể giới thiệu càng nhiều người càng tốt và nhận thưởng tương ứng.
+                            Không giới hạn! Bạn có thể giới thiệu càng nhiều người càng tốt và nhận thưởng tương ứng.
                         </div>
                     </div>
 
@@ -925,7 +925,8 @@ if (mysqli_num_rows($checkip)) {
                     Mỗi kết nối là một bước tiến gần hơn đến mục tiêu của bạn. Nắm bắt cơ hội này và cùng chúng tôi phát
                     triển! <br>
                     <a href="#dangky"
-                        class="inline-flex py-2 px-8 text-primary font-bold bg-white rounded-std mr-2 mt-3 transform transition-transform duration-300 hover:scale-110">Bắt đầu
+                        class="inline-flex py-2 px-8 text-primary font-bold bg-white rounded-std mr-2 mt-3 transform transition-transform duration-300 hover:scale-110">Bắt
+                        đầu
                         ngay</a>
                 </p>
             </div>
@@ -933,16 +934,18 @@ if (mysqli_num_rows($checkip)) {
             <div
                 class="flex flex-col md:flex-row items-center justify-between py-4 border-b border-[rgba(228,219,237,0.06)]">
                 <div class="mb-4 md:mb-0">
-                    <a href="https://vpsttt.com/"><img class="w-48 md:w-56" src="./public/assets/images/logo/logowhite.svg"
-                            alt="Logo Image"></a>
+                    <a href="https://vpsttt.com/"><img class="w-48 md:w-56"
+                            src="./public/assets/images/logo/logowhite.svg" alt="Logo Image"></a>
                 </div>
 
                 <div class="text-white text-center md:text-left">
                     <p class="font-semibold text-lg text-white">Thông tin liên hệ</p>
                     <p class="text-white">Email: <a href="mailto:lienhe@vpsttt.com"
                             class="text-white hover:underline">lienhe@vpsttt.com</a></p>
-                    <p class="text-white">Hotline: <a href="tel:+84328812674" class="text-white hover:underline">+84 328 812 674</a></p>
-                    <p class="text-white">Địa chỉ: Số 15 Đường B3, Phường Vĩnh Hòa, Thành phố Nha Trang, Tỉnh Khánh Hòa</p>
+                    <p class="text-white">Hotline: <a href="tel:+84328812674" class="text-white hover:underline">+84 328
+                            812 674</a></p>
+                    <p class="text-white">Địa chỉ: Số 15 Đường B3, Phường Vĩnh Hòa, Thành phố Nha Trang, Tỉnh Khánh Hòa
+                    </p>
                 </div>
 
                 <div class="mb-4 md:mb-0">
